@@ -1,25 +1,12 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Navbar from './components/NavBar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Derose -  Ecommerce
-        
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Derose Ecommerce
-        </a>
-      </header>
-    </div>
+  <React.Fragment>
+      <Navbar/>
+  </React.Fragment>
   );
 }
 
