@@ -1,7 +1,26 @@
-import { useRef } from "react";
+import { createElement, useRef } from "react";
 import {FaBars, FaTimes, FaCartPlus, FaUserCircle, FaRegBell} from "react-icons/fa";
-import "../Styles/navbar.css";
+import "../Styles/navbar.css"
+import NavLogContent from "./NavLogContent";
 
+const menuItems = [
+    {
+        id:1,
+        label:"Home"
+    },
+    {
+        id:2,
+        label:"About us"
+    },
+    {
+        id:3,
+        label:"Products"
+    },
+    {
+        id:4,
+        label:"Contact"
+    }
+]
 
 function Navbar() {
     const navRef = useRef();
@@ -9,7 +28,8 @@ function Navbar() {
     const showNavbar = () => {
         navRef.current.classList.toggle("responsive_nav");
     }
-    
+
+
     return(
         <header>
             <div className="promo">
@@ -18,19 +38,23 @@ function Navbar() {
             <div className="nav-general">
                 <h3>Logo</h3>
                 <nav ref={navRef} >
-                        <a href="/#">Home</a>
+
+                        {
+                            menuItems.map((item)=> (
+                                <a href="/#" key={item.id} >{item.label}</a>
+                            ))
+                        }
+
+                        {/* <a href="/#">Home</a>
                         <a href="/#">About Us</a>
                         <a href="/#">Products</a>
-                        <a href="/#">Contact</a>
+                        <a href="/#">Contact</a> */}
                         <button className="nav-btn nav-close-btn"    onClick={showNavbar}>
                             <FaTimes/>
                         </button>
                 </nav>
-                <div className="nav-log">
-                    <button className="btn-log"><FaCartPlus/></button> 
-                    <button className="btn-log"><FaRegBell/></button>
-                    <button className="btn-log"><FaUserCircle/></button> 
-                </div> 
+                <NavLogContent/>
+                
                 <button className="nav-btn"    onClick={showNavbar}>
                     <FaBars/>
                 </button>

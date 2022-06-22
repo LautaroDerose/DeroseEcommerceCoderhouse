@@ -64,6 +64,37 @@ header .nav-btn{
     font-size: 1.3rem;
 }
 
+.dropdown{
+    position: relative;
+}
+.dropdown-menu{
+    position: relative;
+}
+
+/* .btn-dropdown{
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColorSecond);
+    font-size: 1rem;
+}
+li .subMenu{
+    display: block;
+    float: left;
+    text-decoration: none;
+    
+        padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    /* color: var(--textColorSecond);
+    font-size: 1rem;
+    opacity: 0;
+    visibility: 0 ;  
+} */
 
 header div.nav-log{
 
