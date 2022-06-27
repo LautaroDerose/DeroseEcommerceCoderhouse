@@ -1,6 +1,6 @@
-import { createElement, useRef } from "react";
-import {FaBars, FaTimes, FaCartPlus, FaUserCircle, FaRegBell} from "react-icons/fa";
-import "../Styles/navbar.css"
+import { useRef } from "react";
+import {FaBars, FaTimes} from "react-icons/fa";
+import "./navbar.css"
 import NavLogContent from "./NavLogContent";
 
 const menuItems = [

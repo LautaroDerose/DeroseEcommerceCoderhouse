@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --mainColor: #f06292 ;
+    --mainColorLight:#ff94c2;
+    --secondColor:#9575cd;
+    --textColor: #000000;
+    --textColorSecond:#e3f2fd;
+}
+
+section{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+div .box{
+    margin: 1rem;
+    padding: 1rem;
+    border: 4px solid var(--mainColorLight);
+    border-radius: 15px;
+}
+
+div h2{
+    margin: 1rem;
+    color: var(--mainColorLight);
+    justify-content: center;
+    text-align: center;
+    text-decoration: underline 3px;
+    margin-top: 1rem;
+}
+
+div .btns-count{
+    margin: 1%;
+    width: 300px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+
+div .cart-container{
+margin: 1%;
+width: 300px;
+justify-content: center;
+align-items: center;
+}
+
+.btn{
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    font-size: 1.3rem;
+    color: var(--mainColorLight);
+    margin: 1;
+    border: 2px solid var(--mainColorLight);
+    border-radius: 25px;
+}
+
+.btns-count{
+    padding: 1rem;
+    margin: 1rem;
+}
+
+span.span-count{
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    font-size: 2rem;
+    color: var(--mainColorLight);
+    margin: 1;
+    
+}
+
+.btn-onAdd{
+    width: 100%;
+
+    justify-content: space-between;
+    align-items: center;
+}
