@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/headerFolder/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+ import Navbar from './components/headerFolder/NavBar';
+ import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   
@@ -9,9 +9,9 @@ function App() {
   return (
   <React.Fragment>
       <Navbar/>
-      <ItemListContainer greeting="to Lautaro's e-commerce"/> 
+      <ItemListContainer greeting="to Lautaro's e-commerce"/>   
       
-  </React.Fragment>
+</React.Fragment>
   );
 }
 

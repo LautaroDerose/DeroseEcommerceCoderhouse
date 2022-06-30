@@ -11,9 +11,9 @@ export const ItemCount = ({stock, name, onAdd}) => {
             <div className="box">
                 <div><h2>Contador de {name}</h2></div>
                 <div className="btns-count">
-                <button className=" btn btn-count" disabled={amount<=1} onClick={()=>handleValue(-1)}>-</button>
-                <span className="span-count" >{amount}</span>
-                <button className="btn btn-count" disabled={amount>=stock} onClick={()=>handleValue(+1)}>+</button>
+                    <button className=" btn btn-count" disabled={amount<=1} onClick={()=>handleValue(-1)}>-</button>
+                    <span className="span-count" >{amount}</span>
+                    <button className="btn btn-count" disabled={amount>=stock} onClick={()=>handleValue(+1)}>+</button>
                 </div>
                 <div className="cart-container">
                     <button className="btn btn-onAdd" disabled={stock<=0} onClick={()=>onAdd(amount)}>
