@@ -7,6 +7,10 @@ const Item = ({product}) => {
 
     const {marca, modelo, img, price, stock, description} = product 
 
+    const onAdd = (quantity) => {
+        console.log(`compraste ${quantity} unidades`);
+    }
+
     return (
         <div className="body">
             <div className="card" >
@@ -26,7 +30,7 @@ const Item = ({product}) => {
                     </div>
                 </div>
                 <div className="card-count">
-                    <ItemCount2/>
+                    <ItemCount2 initial={1} stock={5} onAdd={onAdd} />
                 </div>
                 <div className="card-footer">
                     <button>Comprar ahora</button>
