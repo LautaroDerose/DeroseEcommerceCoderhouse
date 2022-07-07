@@ -14,11 +14,11 @@ const menuItems = [
         label:"About us",
         toLink:"/about"
     },
-    {
-        id:3,
-        label:"Products",
-        toLink:"/products"
-    },
+    // {
+    //     id:3,
+    //     label:"Products",
+    //     toLink:"/products"
+    // },
     {
         id:4,
         label:"Contact",
