@@ -19,7 +19,6 @@ export const ItemCount2 = ({initial, stock, onAdd}) => {
     return (
         <section className="itemCount-container">
             <div className="box">
-                {/* <div><h2>Contador de {name}</h2></div> */}
                 <div className="btns-count">
                     <button className="btn-count" disabled={count<=1} onClick={decrease}>-</button>
                     <span className="span-count">{count}</span>

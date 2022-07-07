@@ -1,0 +1,90 @@
+:root{
+    --mainColor: #f06292 ;
+    --mainColorLight:#ff94c2;
+    --secondColor:#9575cd;
+    --textColor: #000000;
+    --textColorSecond:#e3f2fd;
+    --backgroundColor: #070a1b;
+    --borderColor1: #111424;
+    --bottonColor1: #1AD1DB;
+    --selectBack: #00d2ef;
+    --secondColor: #7253ed;
+}
+
+.about-body{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    background-color: var(--backgroundColor);
+    gap: 2rem;
+    color: #FAFAFA;
+    height: 50vh;
+    
+}
+
+.title-container{
+    height: 50vh;
+    background-image: url("../../assets/rod-long-7Csefv0S--Q-unsplash.jpg");
+    background-size: 50%;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-rows: center;
+}
+
+.title-container .blur{
+    width: 100vh;
+    height: 100%;
+    backdrop-filter: blur(1.5px);
+    /* grayscale
+    display: grid; */
+    grid-template-rows: 1fr 1fr 1fr;
+
+}
+
+
+.about-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    /* height: 50%; */    
+}
+
+.about-title div{
+    padding-top: 50px;
+}
+
+.about-title h1{
+    text-align: center;
+}
+.about-title p{
+    text-align: center;
+}
+
+/* .about-img{
+    height: 50vh;
+}
+.about-img img{
+    max-width: 100%;
+    height: auto;
+    clip-path: inset(0 0 67% 0);
+} */
+
+.team-container{
+    display: grid;
+    grid-template-rows: space-around;
+    justify-content: center;
+    margin: 25px;
+}
+
+.about-item{
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.about-item p{
+text-align: center;
+}

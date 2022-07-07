@@ -7,7 +7,7 @@ export const ItemList = ({productList}) => {
     
     return (
         <div>
-            <h3>Lista de produtos</h3>
+            {/* <h3>Lista de produtos</h3> */}
             <div className="gallery">
                 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap' }}>
                 {productList.map((product)=><Item key={product.id} product={product} />)}

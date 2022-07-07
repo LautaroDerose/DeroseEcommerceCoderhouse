@@ -4,7 +4,11 @@ import product from"../../assets/product.png"
 import ItemCount from "../ItemCount/ItemCount"
 import ItemCount2 from "../ItemCount2/ItemCount2"
 import { ItemList } from '../ItemList/ItemList'
-import {getData} from '../../mocks/fakeApi'
+import {getData, getProds} from '../../mocks/fakeApi'
+import prueba from "../../assets/pablita-934.png"
+import { useParams } from 'react-router'
+import Contact from '../Contact/Contact'
+import AboutUs from '../AboutUs/AboutUs'
 
 export const ItemListContainer = ({greeting}) => {
     
@@ -16,6 +20,8 @@ export const ItemListContainer = ({greeting}) => {
 
     const [loading,setLoading]= useState(true)
 
+    const {categoryId} = useParams()
+
    
 
   useEffect(()=>{
@@ -25,14 +31,34 @@ export const ItemListContainer = ({greeting}) => {
         .finally(()=> setLoading(false))
     },[])
     
+useEffect(()=>{
+    getProds(categoryId)
+      .then((result) =>{
+          setProductList(result)
+      })
+      .catch((error) =>{
+          console.log(error)
+        })
+      .finally(() =>{
+          setLoading(false)
+        })
+  },[categoryId])
+
+//   useEffect(()=>{
+//     getProds(detailId)
+//       .then((result)=>setProductList(result))
+//       .catch((error)=>console.log(error))
+//       .finally(()=> setLoading(false))
+//   },[detailId])
+
+
   console.log(productList)
 
     return (
         <>    
-            <div className="container">
-                {/* Greetig y pagina principal */}
-                <div className="text-container">
-                    <div className="text-box">
+            <div className="greeting-container">
+                <div className="greeting-text-container">
+                    <div className="greeting-text-box">
                         <h1 className="greeting-title">WELCOME</h1>
                         <span className="greeting-subtitle">{greeting}</span>
                     </div>
@@ -47,22 +73,14 @@ export const ItemListContainer = ({greeting}) => {
                     <img src={product} className="product-image"></img>
                 </div>
             </div>
-            <div className="countAndList">
-                {/* CONTADORES */}
-                <div>
-                    <ItemCount2 initial={1} stock={7} onAdd={onAdd} name={"productos.id"} />
-                    
-                </div>
-
+            <div className="list-gallery">
                 {/* LISTADO DE PRODUCTOS */}
                 <div className="item-container">
                     {loading ? <p>Cargando...</p> : <ItemList productList={productList} /> }
                   
                 </div>
-                <div>
-                    
-                </div>
-                    
+                
+                   
             </div>
         </>
     )

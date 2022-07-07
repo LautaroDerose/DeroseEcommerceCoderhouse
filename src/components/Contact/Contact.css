@@ -1,0 +1,21 @@
+:root{
+    --mainColor: #f06292 ;
+    --mainColorLight:#ff94c2;
+    --secondColor:#9575cd;
+    --textColor: #000000;
+    --textColorSecond:#e3f2fd;
+    --backgroundColor: #070a1b;
+    --borderColor1: #111424;
+    --bottonColor1: #1AD1DB;
+    --selectBack: #00d2ef;
+    --secondColor: #7253ed;
+}
+
+.contact-body{
+    background-color: var(--secondColor);
+    color: #FAFAFA;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

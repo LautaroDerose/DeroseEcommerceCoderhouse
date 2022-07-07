@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+---------------------------------------------------------------------------------------------
+
+Ecommerce: tematica a definir
+
+Desarrollo hasta etapa intermedia.
+    - Navbar con rutas a componentes con funcionalidad, y iconos en relacion al Login, aun sin funcinoalidad
+    - Componente ItemListContainer con visualizacion de una fakeApi 
+    - flujo de navegacion a compra desde la lista de productos al detalle del producto
+    - estilos por momento en CSS, a futuro se probara alguna libreria para unificar estilos.
+    - se instalo tambien la libreria React-icons para el uso de iconos y/o emoticones 

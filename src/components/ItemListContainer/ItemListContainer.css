@@ -16,7 +16,7 @@
     --textColorSecond:#e3f2fd;
 }
 
-div .container{
+div .greeting-container{
     display: grid;
     grid-template-columns: 5fr 3fr;
     /* padding: 30vh; */
@@ -25,11 +25,10 @@ div .container{
     text-align: center;
     /* background-image: url(../../untitled.png); */
     background-image: url(../../assets/untitled4.png);
-    background-size: 100%;
-    
+    background-size: 100%;    
 }
 
-div.text-container{
+div.greeting-text-container{
     /* display: grid;
     grid-template-rows: auto; */
     display: flex;
@@ -39,7 +38,7 @@ div.text-container{
     margin-top: 30%;
 }
 
-div.text-box{
+div.greeting-text-box{
     text-align: center;
     /* display: flex;
     flex-direction: column; */
@@ -118,3 +117,126 @@ img.product-image{
         font-size: 5px;
     }
 }
+
+/* ------------------------------------------------------------------ */
+/* OPCION B */
+/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Press+Start+2P&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --mainColor: #f06292 ;
+    --mainColorLight:#ff94c2;
+    --secondColor:#9575cd;
+    --textColor: #000000;
+    --textColorSecond:#e3f2fd;
+    --backgroundColor: #070a1b;
+    --borderColor1: #111424;
+    --bottonColor1: #1AD1DB;
+    --selectBack: #00d2ef;
+    --secondColor: #7253ed;
+
+
+}
+
+div .container{
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    width: 100%;
+    text-align: center;
+    background-color: var(--backgroundColor);
+    background-size: 100%;
+    
+}
+
+div.text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 30%;
+}
+
+div.text-box{
+    text-align: center;
+
+}
+
+h1.greeting-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    color: var(--bottonColor1);
+    
+}
+
+span.greeting-subtitle {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    color: var(--textColorSecond);
+    margin-top: 10%;
+    padding-top: 10%;
+    
+}
+
+.greeting-btns{
+    display: flex;
+    flex-direction: row;    
+    gap: 2rem;
+    justify-content: center;
+}
+
+.all-btn{
+    padding: 10px;
+    cursor: pointer;
+    background: transparent;
+    font-size: 1rem;
+    color: var(--bottonColor1);
+    margin: 1;
+    border: 2px solid var(--bottonColor1);
+    border-radius: 25px;
+}
+
+.off-btn{
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--bottonColor1);
+    font-size: 1rem;
+    color: var(--backgroundColor);
+    margin: 1;
+    border: 2px solid var(--borderColor1);
+    border-radius: 25px;
+}
+
+
+div.image-container{
+    padding: 5%;
+    margin: 10%;
+
+    
+}
+
+img.product-image{
+    
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.list-gallery{
+    background-color: var(--backgroundColor);
+}
+
+
+
+@media only screen and (max-width: 768px){
+    h1.greeting-title {
+    font-size: 25px;
+    }
+    span.greeting-subtitle   {
+        font-size: 5px;
+    }
+} */

@@ -3,9 +3,11 @@ import {FaRegHeart, FaCheck} from "react-icons/fa";
 import CartWidget from '../CartWidget';
 import ItemCount2 from '../ItemCount2/ItemCount2';
 import "./Item.css"
+import {Link} from  'react-router-dom';
+
 const Item = ({product}) => {
 
-    const {marca, modelo, img, price, stock, description} = product 
+    const {id, marca, modelo, img, price, stock, category, description} = product 
 
     const onAdd = (quantity) => {
         console.log(`compraste ${quantity} unidades`);
@@ -17,7 +19,7 @@ const Item = ({product}) => {
                 <div className="card-header">
                     <h3>{marca}</h3>
                     <p>{modelo}</p>
-                    {/* <span>New or Off</span> */}
+                    <span>{category}</span>
                 </div>
                 <div className="card-img">
                     <img src={img} alt={marca + modelo}/>
@@ -28,9 +30,13 @@ const Item = ({product}) => {
                         <p>Precio</p>
                         <strong>${price}</strong>
                     </div>
+                    <div className="btn-detail">
+                        <button>  <Link className="detail" to={`/detail/${id}`}>Ver detalle</Link></button>
+                        {/* to={`/detail/${id}`} */}
+                    </div>
                 </div>
                 <div className="card-count">
-                    <ItemCount2 initial={1} stock={5} onAdd={onAdd} />
+                    <ItemCount2 initial={1} stock={stock} onAdd={onAdd} />
                 </div>
                 <div className="card-footer">
                     <button>Comprar ahora</button>

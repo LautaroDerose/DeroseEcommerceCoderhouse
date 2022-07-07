@@ -1,3 +1,11 @@
+:root{
+    --backgroundColor: #070a1b;
+    --borderColor1: #111424;
+    --bottonColor1: #1AD1DB;
+    --selectBack: #00d2ef;
+    --secondColor2: #7253ed;
+}
+
 .galery{
     display: grid;
     gap: 1rem;
