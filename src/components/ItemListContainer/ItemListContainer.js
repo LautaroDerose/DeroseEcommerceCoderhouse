@@ -1,20 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import "./ItemListContainer.css"
 import product from"../../assets/product.png"
-import ItemCount from "../ItemCount/ItemCount"
-import ItemCount2 from "../ItemCount2/ItemCount2"
 import { ItemList } from '../ItemList/ItemList'
 import {getData, getProds} from '../../mocks/fakeApi'
-import prueba from "../../assets/pablita-934.png"
 import { useParams } from 'react-router'
-import Contact from '../Contact/Contact'
-import AboutUs from '../AboutUs/AboutUs'
+
 
 export const ItemListContainer = ({greeting}) => {
     
-    const onAdd = (quantity) => {
-        console.log(`compraste ${quantity} unidades`);
-    }
+    
 
     const [productList, setProductList]= useState([])
 
@@ -70,7 +64,7 @@ useEffect(()=>{
                 </div>
                 
                 <div className="image-container">
-                    <img src={product} className="product-image"></img>
+                    <img src={product} className="product-image" alt={product.modelo}></img>
                 </div>
             </div>
             <div className="list-gallery">

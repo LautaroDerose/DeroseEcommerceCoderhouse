@@ -1,8 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
 import ItemCount2 from '../ItemCount2/ItemCount2'
 import './ItemDetail.css'
 
 const ItemDetail = ({ product }) => {
+
+    const [goToCart, setGoToCart] =useState(false);
+
+    const onAdd = (quantity) => {
+        setGoToCart(true);
+    }
+
     return (
             <div className="detail-container">
                 <div className="detail-img-container">
@@ -33,7 +41,11 @@ const ItemDetail = ({ product }) => {
                         </div>
                     </div>
                     <div className="count-container">
-                    <ItemCount2 stock={product.stock} initial={1}/>
+                        {
+                            goToCart
+                            ? <Link className="finish-buy" to='/cart'>Finalizar compra</Link>
+                            : <ItemCount2 stock={product.stock} initial={1} onAdd={onAdd}/>
+                        }
                     </div>
                     </div>
                 </div>
