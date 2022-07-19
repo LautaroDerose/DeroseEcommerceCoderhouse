@@ -22,7 +22,7 @@ const CartProvider = ({ children }) => {
 
     const clearCart = () => setCart([]);
     const isInCart = (id) => { return cart.find(product => product.id === id) ? true : false ; 
-    const removeProduct = (id) => setCart(cart.filter(product => product.id !== id));
+    const deleteProduct = (id) => setCart(cart.filter(product => product.id !== id));
 }        
     return (
         <CartContext.Provider value={{
@@ -31,6 +31,11 @@ const CartProvider = ({ children }) => {
             // removeProduct,
             //Si no comento la linea de arriba la pagina sale en blanco, y me arroja el error: "Line 31:13:  'removeProduct' is not defined  no-undef  |  Search for the keywords to learn more about each error."
             addProduct,
+            totalPrice,
+            totalProducts,
+            deleteProduct, 
+
+            cart
         }}>    
             {children}
         </CartContext.Provider>    
