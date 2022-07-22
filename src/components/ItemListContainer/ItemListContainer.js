@@ -6,33 +6,51 @@ import { ItemList } from '../ItemList/ItemList'
 import { useParams } from 'react-router'
 import { db } from "../../firebase/firebase";
 // import { getDocs, collection, query, where} from "firebase/firestore"
-import { log } from 'async'
-import { getFirestore, collection, getDocs, query, where } from '@firebase/firestore';
-import { red } from 'jest-matcher-utils/node_modules/chalk'
+import { collection, getDocs, query, where } from '@firebase/firestore';
 
 
 
 export const ItemListContainer = ({greeting}) => {
     
-    const [productList, setProductList]= useState([])
-    // const [products, setProducts] = useState([]);
-    const [loading,setLoading]= useState(true)
+    // const [productList, setProductList]= useState([]);
+    const [products, setProducts] = useState([]);
+    const [loading,setLoading]= useState(true);
     // const {categoryId} = useParams()
-    const [data,setData] = useState([]);
+    // const [data,setData] = useState([]);
     const {categoryId} = useParams()
 
     useEffect(() => {
-        const querydb = getFirestore();
-        const queryCollection = collection(querydb, 'products');
-        if(categoryId) {
-                const queryFilter = query(queryCollection, where('category', '==', 'categoryId'))
-                getDocs(queryFilter)
-                .then(res => console.log(res.docs.map(product => ({id: product.id, ...product.data()  })) ))
-            }else {
-                getDocs(queryCollection)
-                .then(res => console.log(res.docs.map(product => ({id: product.id, ...product.data()  })) ))
 
-            }
+        const q = categoryId
+            ? query(collection(db, 'products'), where('category', '==', categoryId))
+            : collection(db, 'products');
+        
+        getDocs(q)
+            .then(result => {
+                const lista = result.docs.map(doc => {
+                    return{
+                        id: doc.id,
+                        ...doc.data(),
+                    }
+                })
+                setProducts(lista)
+            })
+            .catch(err => console.log(err))
+            .finally(() => setLoading(false))
+
+
+
+        // const querydb = getFirestore();
+        // const queryCollection = collection(querydb, 'products');
+        // if(categoryId) {
+        //         const queryFilter = query(queryCollection, where('category', '==', 'categoryId'))
+        //         getDocs(queryFilter)
+        //         .then(res => console.log(res.docs.map(product => ({id: product.id, ...product.data()  })) ))
+        //     }else {
+        //         getDocs(queryCollection)
+        //         .then(res => console.log(res.docs.map(product => ({id: product.id, ...product.data()  })) ))
+
+        //     }
 
     },[categoryId])
    
@@ -80,7 +98,7 @@ export const ItemListContainer = ({greeting}) => {
 
     return (
         <>    
-            {/* <div className="greeting-container">
+            <div className="greeting-container">
                 <div className="greeting-text-container">
                     <div className="greeting-text-box">
                         <h1 className="greeting-title">WELCOME</h1>
@@ -100,12 +118,12 @@ export const ItemListContainer = ({greeting}) => {
             <div className="list-gallery">
                 
                 <div className="item-container">
-                    {loading ? <p>Cargando...</p> : <ItemList productList={productList} /> }
+                    {loading ? <p>Cargando...</p> : <ItemList products={products} /> }
                   
                 </div>
                 
                    
-            </div> */}
+            </div>
         </>
     )
 }

@@ -27,17 +27,17 @@ const menuItems = [
     {
         id:5,
         label:"Cat01",
-        toLink:"/category/cat01"
+        toLink:"/category/category01"
     },
     {
         id:6,
         label:"Cat02",
-        toLink:"/category/cat02"
+        toLink:"/category/category02"
     },
     {
         id:7,
         label:"Cat04",
-        toLink:"/category/cat04"
+        toLink:"/category/category04"
     }
 ]
 

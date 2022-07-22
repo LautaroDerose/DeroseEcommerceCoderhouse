@@ -2,7 +2,7 @@ import React from 'react'
 import Item from '../Item/Item'
 import "./ItemList.css"
 
-export const ItemList = ({productList}) => {
+export const ItemList = ({products}) => {
     
     
     return (
@@ -10,7 +10,7 @@ export const ItemList = ({productList}) => {
             {/* <h3>Lista de produtos</h3> */}
             <div className="gallery">
                 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap' }}>
-                {productList.map((product)=><Item key={product.id} product={product} />)}
+                {products.map((product)=><Item key={product.id} product={product} />)}
                 </div>
             </div>
         </div>
