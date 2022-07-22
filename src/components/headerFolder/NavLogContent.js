@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaBars, FaTimes, FaCartPlus, FaUserCircle, FaRegBell} from "react-icons/fa";
+import {FaUserCircle, FaRegBell} from "react-icons/fa";
 import CartWidget from '../CartWidget/CartWidget';
 
 const NavLogContent = () => {

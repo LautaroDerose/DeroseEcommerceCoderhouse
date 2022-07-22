@@ -1,5 +1,4 @@
 import React from 'react'
-import aboutBackground from "../../assets/rod-long-7Csefv0S--Q-unsplash.jpg"
 import "./AboutUs.css"
 
 

@@ -12,7 +12,6 @@ import CartProvider from './context/CartContext';
 
 import Contact from './components/Contact/Contact';
 import AboutUs from './components/AboutUs/AboutUs';
-import { ListItem } from '@mui/material';
 
 
 function App() {

@@ -1,6 +1,6 @@
-import React, {useContext} from 'react'
-import {FaRegHeart, FaCheck} from "react-icons/fa";
-import CartWidget from '../CartWidget/CartWidget';
+import React from 'react'
+import {FaRegHeart} from "react-icons/fa";
+// import CartWidget from '../CartWidget/CartWidget';
 import ItemCount2 from '../ItemCount2/ItemCount2';
 import "./Item.css"
 import {Link} from  'react-router-dom';
