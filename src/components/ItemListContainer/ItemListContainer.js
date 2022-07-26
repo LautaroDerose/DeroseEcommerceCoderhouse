@@ -15,7 +15,6 @@ export const ItemListContainer = ({greeting}) => {
     // const [productList, setProductList]= useState([]);
     const [products, setProducts] = useState([]);
     const [loading,setLoading]= useState(true);
-    // const {categoryId} = useParams()
     // const [data,setData] = useState([]);
     const {categoryId} = useParams()
 

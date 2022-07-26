@@ -9,7 +9,7 @@ import {Link} from  'react-router-dom';
 const Item = ({product}) => {
 
 
-    const {id, marca, modelo, img, price, stock, category, description} = product 
+    const {id, brand, image, price, stock, category} = product 
 
     const onAdd = (quantity) => {
         console.log(`compraste ${quantity} unidades`);
@@ -19,12 +19,12 @@ const Item = ({product}) => {
         <div className="body">
             <div className="card" >
                 <div className="card-header">
-                    <h3>{marca}</h3>
-                    <p>{modelo}</p>
+                    <h3>{brand}</h3>
+                    {/* <p>{modelo}</p> */}
                     <span>{category}</span>
                 </div>
                 <div className="card-img">
-                    <img src={img} alt={marca + modelo}/>
+                    <img src={image} alt={brand}/>
                     <i className="FaRegHeart"><FaRegHeart/></i>
                 </div>
                 <div className="card-details">
