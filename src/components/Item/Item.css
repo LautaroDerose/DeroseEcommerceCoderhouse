@@ -59,7 +59,6 @@
     border-radius: 12px;
     margin: 22px 0;
     overflow: hidden;
-    
 }
 
 .card .card-img img {
@@ -83,7 +82,6 @@
     color: #758a82;
     background: none;
     padding: 6px;
-
 }
 
 .card .card-details{
@@ -149,7 +147,6 @@
     background: #f1f2f3;
     border-radius: 3px;
     padding: 6px 12px;
-
 }
 
 .card .card-sizes span.selected{
@@ -168,9 +165,6 @@
     letter-spacing: .5px;
 }
 
-
-
-
 .btn-detail button{
     text-decoration: none;
     cursor: pointer;
@@ -186,13 +180,10 @@
     letter-spacing: .5px;
 }
 
-
-
 .btn-detail button .detail{
     text-decoration: none;
     color: #fafafa;
 }
-
 
 .card .card-count{
     width: 100%;

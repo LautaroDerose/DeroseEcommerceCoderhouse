@@ -7,11 +7,9 @@ const CartWidget = () => {
 
     return (
         <>
-
             <button className="btn-log"><FaCartPlus/></button>
             <span>{totalProducts() || ''}</span>
         </>
-        
     )
 }
 

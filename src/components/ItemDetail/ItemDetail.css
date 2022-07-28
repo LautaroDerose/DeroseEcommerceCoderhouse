@@ -23,8 +23,8 @@
 
 .detail-img-container{
     max-width: 50vh;
-    
 }
+
 .detail-img-container img{
 width: 100%;
 }
@@ -33,11 +33,12 @@ width: 100%;
     width: 100%;
     display: flex;
     justify-content: space-between;
-
 }
+
 .detail-info h1{
     color: #fafafa;
 }
+
 .detail-info h2{
     color: #afafaf;    
 }
@@ -64,11 +65,9 @@ h4{
     background: #f1f2f3;
     border-radius: 3px;
     padding: 6px 12px;
-
 }
 
 .finish-buy{
-    
     text-decoration: none;
     padding: 15px;
     margin: 15px;
@@ -80,5 +79,4 @@ h4{
     color: #ffffff;
     font-size: 20px;
     letter-spacing: .5px;
-
 }

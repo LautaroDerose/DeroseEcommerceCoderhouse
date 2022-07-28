@@ -43,7 +43,6 @@ const menuItems = [
 
 function Navbar() {
     const navRef = useRef();
-    
     const showNavbar = () => {
         navRef.current.classList.toggle("responsive_nav");
     }
@@ -54,25 +53,18 @@ function Navbar() {
             <div className="promo">
                     <span>Estas son las ofertas de la semana 80% OFF por el dia del Padre</span>
             </div>
-            
+
             <div className="nav-general">
                 <NavLink to='/'><h3>Logo</h3></NavLink>
                 <nav ref={navRef} >
-
-                        {
-                            menuItems.map((item)=> (
-                                <NavLink to={item.toLink} key={item.id} >{item.label}</NavLink>
-                            ))
-                        }
-                        <button className="nav-btn nav-close-btn"    onClick={showNavbar}>
-                            <FaTimes/>
-                        </button>
+                    {
+                        menuItems.map((item)=> (
+                            <NavLink to={item.toLink} key={item.id} >{item.label}</NavLink>     ))
+                    }
+                    <button className="nav-btn nav-close-btn"onClick={showNavbar}><FaTimes/></button>
                 </nav>
                 <NavLogContent/>
-                
-                <button className="nav-btn"    onClick={showNavbar}>
-                    <FaBars/>
-                </button>
+                <button className="nav-btn"    onClick={showNavbar}><FaBars/></button>
             </div>
         </header>
     )

@@ -1,7 +1,6 @@
 import React from 'react'
 import { useCartContext } from '../../context/CartContext'
 
-
 const ItemCart = ({ product }) => {
     const {removeProduct} = useCartContext();
     return (
