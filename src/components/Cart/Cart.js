@@ -24,11 +24,7 @@ const Cart = () => {
         const ordersCollection = collection(db, 'orders');
         addDoc(ordersCollection, order)
         .then(({id}) => console.log(id))
-
-
     }
-
-
 
     if(cart.length === 0){
         return (
@@ -45,9 +41,11 @@ const Cart = () => {
                 cart.map(product => <ItemCart key={product.id} product={product}/>)
             }
             
-            <p>Total: {totalPrice()} </p>
-            <Link  className="finish-buy" to='/' onClick={handleClick} >Confirmar Compra</Link>
+            <p className="totalP">Total: {totalPrice()} </p>
+            <br></br>
+            {/* <Link  className="finish-buy" to='/' onClick={handleClick} >Confirmar Compra</Link> */}
             {/* En lugar de enviar al home, poner alert: "su compra ha sido realizada con exito" */}
+            <button className="finish-buy" onClick={handleClick}>Confirmar compra</button>
         </>
     )
 

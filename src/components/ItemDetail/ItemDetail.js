@@ -32,10 +32,10 @@ const ItemDetail = ({ product }) => {
                     </div>
                     <div>
                         <h4>Talles</h4>
-                        <div class="detail-talles">
+                        <div className="detail-talles">
                             <span>31</span>
                             <span>32</span>
-                            <span class="selected">33</span>
+                            <span className="selected">33</span>
                             <span>34</span>
                             <span>35</span>
                             <span>36</span>

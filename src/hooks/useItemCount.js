@@ -11,7 +11,6 @@ export const useItemCount = (stock) => {
         }
     }
     
-   
     return {
         handleValue, amount
     }
