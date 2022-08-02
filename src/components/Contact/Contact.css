@@ -19,3 +19,32 @@
     align-items: center;
     justify-content: center;
 }
+
+.form-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+}
+input,
+textarea{
+    border: thin solid #dedede;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    outline: none;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1;
+    border-color: transparent;
+
+    /* margin: 5px;
+    padding: 5px; */
+}
+
+textarea{
+    font-family: inherit;
+    resize: none;
+    height: 150px;
+    width: 75vh;
+}

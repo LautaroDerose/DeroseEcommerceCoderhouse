@@ -7,7 +7,7 @@ const menuItems = [
     {
         id:1,
         label:"Home",
-        toLink:"/"
+        toLink:"/home"
     },
     {
         id:2,

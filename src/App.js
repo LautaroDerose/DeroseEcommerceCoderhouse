@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Navbar from './components/headerFolder/NavBar';
@@ -8,10 +8,27 @@ import Cart from './components/Cart/Cart';
 import CartProvider from './context/CartContext';
 import Contact from './components/Contact/Contact';
 import AboutUs from './components/AboutUs/AboutUs';
+import Home from './components/Home/Home'
+import LogInContainer from './components/LogInContainer/LogInContainer';
+import app from "./firebase/firebase"
+import { getAuth, onAuthStateChanged } from "firebase/auth"
+const auth = getAuth(app);
 
 function App() {
+
+  const [usuarioGlobal, setUsuarioGlobal] = useState(null);
+
+    onAuthStateChanged(auth, (usuarioFirebase) => {
+        if (usuarioFirebase) {
+            setUsuarioGlobal(usuarioFirebase);
+        } else{
+            setUsuarioGlobal(null);
+        }
+    })
+
   return (
     <>
+      {usuarioGlobal ? <Home correoUsuario = {usuarioGlobal.email} /> : <LogInContainer/>}
       <BrowserRouter>
           <CartProvider>
             <Navbar/>
@@ -22,6 +39,7 @@ function App() {
               <Route path='/about' element={<AboutUs/>} />
               <Route path='/cart' element={<Cart/>} />
               <Route path="/detail/:productId" element={<ItemDetailContainer/>} />
+              <Route path='/home' element={<Home/>} />
             </Routes>
           </CartProvider>
       </BrowserRouter>
