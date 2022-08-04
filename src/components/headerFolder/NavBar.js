@@ -26,18 +26,18 @@ const menuItems = [
     },
     {
         id:5,
-        label:"Cat01",
-        toLink:"/category/category01"
+        label:"televisores",
+        toLink:"/category/televisores"
     },
     {
         id:6,
-        label:"Cat02",
-        toLink:"/category/category02"
+        label:"celulares",
+        toLink:"/category/celulares"
     },
     {
         id:7,
-        label:"Cat04",
-        toLink:"/category/category04"
+        label:"notebooks",
+        toLink:"/category/notebooks"
     }
 ]
 

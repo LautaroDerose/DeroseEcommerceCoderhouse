@@ -2,7 +2,9 @@ import React from 'react'
 import { useCartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom';
 import ItemCart from '../ItemCart/ItemCart';
-import { addDoc, collection, getFirestore } from 'firebase/firestore';
+import { addDoc, collection, getFirestore, serverTimestamp } from 'firebase/firestore';
+import LogInContainer from '../LogInContainer/LogInContainer';
+import LogIn from '../LogIn/LogIn';
 
 const Cart = () => {
     const { cart, totalPrice } = useCartContext();
@@ -15,6 +17,9 @@ const Cart = () => {
             addres: 'asdasd'
         },
         items: cart.map(product => ({ id: product.id, name: product.brand, price: product.price, quantity: product.quantity})),
+
+        date: serverTimestamp(),
+        state:"generada",
         total: totalPrice(),
     }
 
@@ -46,6 +51,7 @@ const Cart = () => {
             {/* <Link  className="finish-buy" to='/' onClick={handleClick} >Confirmar Compra</Link> */}
             {/* En lugar de enviar al home, poner alert: "su compra ha sido realizada con exito" */}
             <button className="finish-buy" onClick={handleClick}>Confirmar compra</button>
+            {/* <button className="finish-buy" onClick={usuarioGlobal ? {handleClick} : <LogInContainer/>}>Confirmar compra</button> */}
         </>
     )
 

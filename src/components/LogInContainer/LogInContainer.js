@@ -32,12 +32,13 @@ const LogInContainer = () => {
                 
                 <form onSubmit={submitHandler}>
 
-                    <label for="nombre">Ingrese su nombre</label>
+                    <label htmlFor="nombre">Ingrese su nombre</label>
                     <input type="text" placeholder="Escribe tu nombre" maxLength="15" name="nombre" id="nombre" />
 
+                    <label htmlFor="email">Ingrese su email</label>
                     <input type="email" name="" id="formEmail" placeholder="ejemplo@unMail.com" />
 
-                    <label for="password">Ingrese su contrasena</label>
+                    <label htmlFor="password">Ingrese su contrasena</label>
                     <input type="password" placeholder="Escribe tu contrasena" id="formPassword"/>
 
                     {/* <input type="checkbox" name="" id=""  />Check me put */}

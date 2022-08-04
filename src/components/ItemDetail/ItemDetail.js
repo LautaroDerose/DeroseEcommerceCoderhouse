@@ -8,6 +8,7 @@ const ItemDetail = ({ product }) => {
 
     const [goToCart, setGoToCart] =useState(false);
     const {addProduct} = useCartContext();
+    const {id, brand, image, price, stock, category, description} = product 
 
     const onAdd = (quantity) => {
         setGoToCart(true);
@@ -17,17 +18,19 @@ const ItemDetail = ({ product }) => {
     return (
             <div className="detail-container">
                 <div className="detail-img-container">
-                <img className='detail-img' src={product.img} alt={product.marca}/>
+                <img className='detail-img' src={image} alt={brand}/>
                 </div>
                 <div>
                     <div>
                         <div className="detail-info">
                             <div>
-                            <h1>{product.marca}</h1>
-                            <h2>{product.modelo}</h2>
+                            <h1>{brand}</h1>
+                            <h2>{stock}</h2>
+                            <h3>{category}</h3>
+                            <p>{description}</p>
                             </div>
                             <div>
-                                <h3>${product.price}</h3>
+                                <h3>${price}</h3>
                         </div>
                     </div>
                     <div>
@@ -44,8 +47,8 @@ const ItemDetail = ({ product }) => {
                     <div className="count-container">
                         {
                             goToCart
-                            ? <Link className="finish-buy" to='/cart'>Finalizar compra</Link>
-                            : <ItemCount stock={product.stock} initial={1} onAdd={onAdd}/>
+                            ? <button className="btn-onAdd"><Link className="finish-buy" to='/cart'>Finalizar compra</Link></button>
+                            : <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
                         }
                     </div>
                     </div>

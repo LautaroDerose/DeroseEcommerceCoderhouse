@@ -1,14 +1,17 @@
 import React from 'react'
 import {FaCartPlus} from "react-icons/fa";
 import { useCartContext } from '../../context/CartContext';
+import "./CartWidget.css"
 
 const CartWidget = () => {
     const {totalProducts} = useCartContext();
 
     return (
         <>
-            <button className="btn-log"><FaCartPlus/></button>
-            <span>{totalProducts() || ''}</span>
+    
+                <button className="btn-log"><FaCartPlus className="FaCartPlus"/></button>
+                <span className="badge badge-warning" id="contador_navbar">{totalProducts() || ''}</span>
+            
         </>
     )
 }

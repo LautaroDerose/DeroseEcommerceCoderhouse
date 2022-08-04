@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { useCartContext } from '../../context/CartContext';
 import {FaRegHeart} from "react-icons/fa";
 import ItemCount from '../ItemCount/ItemCount';
 import "./Item.css"
@@ -6,9 +7,18 @@ import {Link} from  'react-router-dom';
 
 
 const Item = ({product}) => {
-    const {id, brand, image, price, stock, category} = product 
+
+    const [goToCart, setGoToCart] =useState(false);
+    const {addProduct} = useCartContext();
+    const {id, brand,model, image, price, stock, category} = product 
+
     const onAdd = (quantity) => {
-        console.log(`compraste ${quantity} unidades`);
+        setGoToCart(true);
+        addProduct(product, quantity);
+
+    
+    // const onAdd = (quantity) => {
+    //     console.log(`compraste ${quantity} unidades`);
     }
 
     return (
@@ -16,7 +26,7 @@ const Item = ({product}) => {
             <div className="card" >
                 <div className="card-header">
                     <h3>{brand}</h3>
-                    {/* <p>{modelo}</p> */}
+                    <p>{model}</p>
                     <span>{category}</span>
                 </div>
                 <div className="card-img">
@@ -32,9 +42,16 @@ const Item = ({product}) => {
                         <button>  <Link className="detail" to={`/detail/${id}`}>Ver detalle</Link></button>
                     </div>
                 </div>
-                <div className="card-count">
+                <div className="cart-container">
+                        {
+                            goToCart
+                            ? <button className="btn-onAdd"><Link className="finish-buy" to='/cart'>Finalizar compra</Link></button>
+                            : <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
+                        }
+                    </div>
+                {/* <div className="card-count">
                     <ItemCount initial={1} stock={stock} onAdd={onAdd} />
-                </div>
+                </div> */}
                 <div className="card-footer">
                     <button>Comprar ahora</button>
                 </div>
