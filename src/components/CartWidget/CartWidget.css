@@ -12,3 +12,8 @@
     vertical-align: top;
     margin-left: -25px;
 }
+#none_badge{
+    overflow: hidden;
+    color: transparent;
+    background: transparent     ;
+}

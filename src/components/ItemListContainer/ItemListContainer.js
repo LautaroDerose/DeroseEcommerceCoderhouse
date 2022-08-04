@@ -6,6 +6,7 @@ import { useParams } from 'react-router'
 import { db } from "../../firebase/firebase";
 import { collection, getDocs, query, where } from '@firebase/firestore';
 import LogInContainer from '../LogInContainer/LogInContainer'
+import PruebaModal from '../PruebaModal/PruebaModal'
 
 export const ItemListContainer = ({greeting}) => {
     
@@ -35,6 +36,7 @@ export const ItemListContainer = ({greeting}) => {
 
     return (
         <>    
+        <PruebaModal/>
             <div className="greeting-container">
                 <div className="greeting-text-container">
                     <div className="greeting-text-box">

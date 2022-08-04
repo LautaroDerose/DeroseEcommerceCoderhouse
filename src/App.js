@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      {usuarioGlobal ? <Home correoUsuario = {usuarioGlobal.email} /> : <LogInContainer/>}
+      {/* {usuarioGlobal ? <Home correoUsuario = {usuarioGlobal.email} /> : <LogInContainer/>} */}
       <BrowserRouter>
         {/* <AuthProvider> */}
           <CartProvider>

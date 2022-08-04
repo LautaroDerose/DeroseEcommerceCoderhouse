@@ -10,7 +10,13 @@ const CartWidget = () => {
         <>
     
                 <button className="btn-log"><FaCartPlus className="FaCartPlus"/></button>
-                <span className="badge badge-warning" id="contador_navbar">{totalProducts() || ''}</span>
+                {
+                    totalProducts() > 0 ?
+                    <span className="badge badge-warning" id="contador_navbar">{totalProducts() || ''}</span>
+                    :
+                    <span></span>
+                }
+                
             
         </>
     )
