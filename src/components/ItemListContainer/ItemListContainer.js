@@ -7,6 +7,10 @@ import { db } from "../../firebase/firebase";
 import { collection, getDocs, query, where } from '@firebase/firestore';
 import LogInContainer from '../LogInContainer/LogInContainer'
 import PruebaModal from '../PruebaModal/PruebaModal'
+import AboutUs from '../AboutUs/AboutUs'
+import Review from '../Review/Review'
+import Contact from '../Contact/Contact'
+import Footer from '../Footer/Footer'
 
 export const ItemListContainer = ({greeting}) => {
     
@@ -36,28 +40,24 @@ export const ItemListContainer = ({greeting}) => {
 
     return (
         <>    
-        <PruebaModal/>
-            <div className="greeting-container">
-                <div className="greeting-text-container">
-                    <div className="greeting-text-box">
-                        <h1 className="greeting-title">WELCOME</h1>
-                        <span className="greeting-subtitle">{greeting}</span>
-                    </div>
-                    <br></br>
-                    <div className="greeting-btns">
-                        <button className="all-btn">Ver todos los productos</button>
-                        <button className="off-btn">Ofertas de la semana</button>
-                    </div>
+        {/* <PruebaModal/> */}
+            <section className="home" id="home">
+                <div className="content">
+                    <h3>Un Titulazo</h3>
+                    <span>{greeting}</span>
+                    <p>orem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor .</p>
+                    <a href="#" className="btn-extra">Shop Now</a>
                 </div>
-                <div className="image-container">
-                    <img src={product} className="product-image" alt={product.modelo}></img>
-                </div>
-            </div>
+            </section>
             <div className="list-gallery">
                 <div className="item-container">
                     {loading ? <p>Cargando...</p> : <ItemList products={products} /> }
                 </div>       
             </div>
+        <AboutUs/>
+        <Review/>
+        <Contact/>
+        <Footer/>
         </>
     )
 }

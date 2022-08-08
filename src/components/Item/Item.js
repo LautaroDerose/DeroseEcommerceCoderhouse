@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import { useCartContext } from '../../context/CartContext';
-import {FaRegHeart} from "react-icons/fa";
+import {FaRegBookmark, FaRegHeart, FaRegPaperPlane, FaShareAlt, FaTelegramPlane} from "react-icons/fa";
 import ItemCount from '../ItemCount/ItemCount';
 import "./Item.css"
 import {Link} from  'react-router-dom';
+import FavButton from '../FavButton/FavButton';
 
 
 const Item = ({product}) => {
@@ -27,11 +28,22 @@ const Item = ({product}) => {
                 <div className="card-header">
                     <h3>{brand}</h3>
                     <p>{model}</p>
+                    <div>
                     <span>{category}</span>
+                    </div>
+
                 </div>
-                <div className="card-img">
-                    <img src={image} alt={brand}/>
-                    <i className="FaRegHeart"><FaRegHeart/></i>
+                <div className="card-img-container">
+                    <div className="card-img">
+                        <img src={image} alt={brand}/>
+                        <i className="FaRegHeart"><FaRegHeart/></i>
+                    </div>
+                    <div className="fav-btns">
+                        <span className="fav-icons"><FavButton id={id} /></span>
+                        <span className="fav-icons"><i><FaShareAlt/></i></span>
+                        <span className="fav-icons"><i><FaRegPaperPlane/></i></span>
+                        <span className="fav-icons"><i><FaRegBookmark/></i></span>
+                    </div>
                 </div>
                 <div className="card-details">
                     <div className="price">

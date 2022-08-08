@@ -1,8 +1,12 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
 import {FaBars, FaTimes} from "react-icons/fa";
 import "./navbar.css"
 import NavLogContent from "./NavLogContent";
 import {NavLink} from 'react-router-dom';
+import PruebaModal from "../PruebaModal/PruebaModal";
+import { AuthContext } from "../../context/AuthContext";
+import CartWidget   from '../CartWidget/CartWidget'
+
 const menuItems = [
     {
         id:1,
@@ -41,7 +45,12 @@ const menuItems = [
     }
 ]
 
+
+
+
 function Navbar() {
+    const {mostrar, setMostrar} = useContext(AuthContext)
+
     const navRef = useRef();
     const showNavbar = () => {
         navRef.current.classList.toggle("responsive_nav");
@@ -49,7 +58,7 @@ function Navbar() {
 
 
     return(
-        <header>
+        <header className="nav-header">
             <div className="promo">
                     <span>Estas son las ofertas de la semana 80% OFF por el dia del Padre</span>
             </div>
@@ -61,13 +70,19 @@ function Navbar() {
                         menuItems.map((item)=> (
                             <NavLink to={item.toLink} key={item.id} >{item.label}</NavLink>     ))
                     }
+                    {/* <Dropdown title="Categories" items={menuItems} multiSelect/> */}
+                    
                     <button className="nav-btn nav-close-btn"onClick={showNavbar}><FaTimes/></button>
+                    <NavLink to="/cart"><CartWidget/></NavLink>
+
                 </nav>
-                <NavLogContent/>
+                {mostrar? 
+                <NavLogContent/> : <PruebaModal/>}
                 <button className="nav-btn"    onClick={showNavbar}><FaBars/></button>
             </div>
         </header>
     )
 }
+
 
 export default Navbar;

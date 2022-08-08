@@ -13,27 +13,33 @@ import LogInContainer from './components/LogInContainer/LogInContainer';
 import app from "./firebase/firebase"
 import { getAuth, onAuthStateChanged } from "firebase/auth"
 
-// import { AuthProvider } from './context/AuthContext';
+import { AuthContext } from './context/AuthContext';
+import PruebaModal from './components/PruebaModal/PruebaModal';
+
 // import { Register } from './components/Register/Register';
 const auth = getAuth(app);
 
 function App() {
+
+  const [mostrar, setMostrar] = useState(false);
 
   const [usuarioGlobal, setUsuarioGlobal] = useState(null);
 
     onAuthStateChanged(auth, (usuarioFirebase) => {
         if (usuarioFirebase) {
             setUsuarioGlobal(usuarioFirebase);
+            setMostrar(true);
         } else{
             setUsuarioGlobal(null);
+            setMostrar(false);
         }
     })
 
   return (
     <>
-      {/* {usuarioGlobal ? <Home correoUsuario = {usuarioGlobal.email} /> : <LogInContainer/>} */}
+      {/* {usuarioGlobal ? <Home  /> : <PruebaModal/>} */}
       <BrowserRouter>
-        {/* <AuthProvider> */}
+        <AuthContext.Provider value={{mostrar, setMostrar}}>
           <CartProvider>
             <Navbar/>
             <Routes>
@@ -47,7 +53,7 @@ function App() {
               <Route path='/home' element={<Home/>} />
             </Routes>
           </CartProvider>
-        {/* </AuthProvider> */}
+        </AuthContext.Provider>
       </BrowserRouter>
     </>
   );

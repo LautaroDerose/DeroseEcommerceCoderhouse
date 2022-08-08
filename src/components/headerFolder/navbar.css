@@ -5,6 +5,11 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
 }
 
 :root{
@@ -15,7 +20,15 @@
     --textColorSecond:#e3f2fd;        
 }
 
+.nav-header{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+}
+
+
 div.nav-general{
+    
     display: flex;
     align-items: center;
     justify-content: space-between;

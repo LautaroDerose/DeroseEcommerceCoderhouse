@@ -1,7 +1,7 @@
-// import { createContext, useContext, useState } from "react";
-// import {createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth'
-// import {auth} from '../firebase/firebase' 
-// import LogInContainer from "../components/LogInContainer/LogInContainer";
+import { createContext, useContext, useState } from "react";
+import {createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth'
+import {auth} from '../firebase/firebase' 
+import LogInContainer from "../components/LogInContainer/LogInContainer";
 
 // export const AuthContext = createContext();
 // // const initialAuth = null;
@@ -13,7 +13,15 @@
 // //     return context;
 // // }
 
+export const AuthContext = createContext({mostrar:false, setMostrar: ()=>
+    {}
+});
+
 // export const AuthProvider = ({children}) => {
+
+
+
+
 //     // const[auth,setAuth] = useState(initialAuth);
 
 //     // const handleAuth = (e)=>{

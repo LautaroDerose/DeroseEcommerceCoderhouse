@@ -53,6 +53,22 @@
     font-size: 18px;
 }
 
+.fav-btns{
+    display: flex;
+    /* justify-content: start; */
+position: relative;
+/* justify-content: space-between; */
+/* gap: 01rem; */
+/* top: 15px;
+right: 15px; */
+z-index: 1;
+}
+
+.fav-icons{
+    padding: 2px;
+    margin: 2px;
+}
+
 .card .card-img {
     position: relative;
     height: 220px;

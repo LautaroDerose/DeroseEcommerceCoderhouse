@@ -1,0 +1,66 @@
+
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../../assets/arno-smit-qY_yTu7YBT4-unsplash.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+}
+
+.btn-extra{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: 0.9rem 2.5rem;
+    font-size: 1rem;
+}
+
+.btn-extra:hover{
+    background: violet;
+}
+
+div .inicio{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div .inicio h4{
+    padding: 1rem;
+}
+
+.btn-cerrarSesion{
+     display: inline-block;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: .7rem;
+}
+
+
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+    .home{
+        background-position: left;
+    }
+    .home .content h3{
+        font-size: 5rem;
+    }
+    .home .content span{
+        font-size: 5rem;
+    }
+}

@@ -101,73 +101,43 @@ const Contact = () => {
     }
 
     return (
-        <div className="contact-body">
+        <section className="contact">
             <div >
-                <h1>Formlario de Contacto</h1>
-                <form onSubmit={handleSubmit, saveData} className="form-container">
+                <h1 className="heading"><span>Contact </span>us</h1>
+                <div className="row">
+                    <form onSubmit={handleSubmit, saveData} className="form-container">
+                        
+                        <input 
+                        className="form-name box" type="text" name="name" placeholder="Escribe tu nombre" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.name, usuarioGlobal.name} required />
+
+                        {errors.name && <p style = {stylesError}>{errors.name}</p>}
+
+                        <input 
+                        className="form-email box" type="email" name="email" placeholder="Escribe tu email" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.email, usuarioGlobal.email} required/>
+
+                        {errors.email && <p style = {stylesError}>{errors.email}</p>}
+
+                        <input 
+                        className="form-asunto box" type="text" name="subject" placeholder="Asunto a tratar" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.subject, usuarioGlobal.subject} required/>
+
+                        {errors.subject && <p style = {stylesError}>{errors.subject}</p>}
+
+
+                        <textarea 
+                        className="form-textarea box" name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.comments, usuarioGlobal.comments} required></textarea>   
+
+                        {errors.comments && <p style = {stylesError}>{errors.comments}</p>}
                     
-                    <input 
-                    className="form-name"
-                    type="text" 
-                    name="name" 
-                    placeholder="Escribe tu nombre" 
-                    onBlur={handleBlur} 
-                    onChange={handleChange, captureInputs} 
-                    value={form.name, usuarioGlobal.name} 
-                    required
-                    />
-                    {errors.name && <p style = {stylesError}>{errors.name}</p>}
-
-                    <input 
-                    className="form-email"
-                    type="email" 
-                    name="email" 
-                    placeholder="Escribe tu email" 
-                    onBlur={handleBlur} 
-                    onChange={handleChange, captureInputs} 
-                    value={form.email, usuarioGlobal.email} 
-                    required
-                    />
-                    {errors.email && <p style = {stylesError}>{errors.email}</p>}
-
-                    <input 
-                    className="form-asunto"
-                    type="text" 
-                    name="subject" 
-                    placeholder="Asunto a tratar" 
-                    onBlur={handleBlur} 
-                    onChange={handleChange, captureInputs} 
-                    value={form.subject, usuarioGlobal.subject} 
-                    required
-                    />
-                    {errors.subject && <p style = {stylesError}>{errors.subject}</p>}
-
-
-                    <textarea 
-                    className="form-textarea"
-                    name="comments" 
-                    cols="50" 
-                    rows="5" 
-                    placeholder="Escribe tus comentarios"
-                    onBlur={handleBlur} 
-                    onChange={handleChange, captureInputs} 
-                    value={form.comments, usuarioGlobal.comments} 
-                    required
-                    ></textarea>   
-                    {errors.comments && <p style = {stylesError}>{errors.comments}</p>}
-                 
-                    <input
-                    className="form-enviar"
-                    type="submit"
-                    value="Enviar"
-                    />
-                    
-
-
-                </form>
+                        <input className= " btn-extra btn-enviarForm" type="submit" value="Enviar"/>
+                        
+                    </form>
+                    <div className="contact-image-container">
+                        <img src="https://i.postimg.cc/hvwS6dr2/undraw-Profile-data-re-v81r.png" alt="profile-data-image" />
+                    </div>
+                </div>
             </div>
             
-        </div>
+        </section>
     )
 }
 
