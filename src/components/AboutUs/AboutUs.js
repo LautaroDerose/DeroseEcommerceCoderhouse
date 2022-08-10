@@ -14,11 +14,11 @@ const AboutUs = () => {
                         <h3>Best Product Sellers</h3>
                     </div>
                     <div className="content">
-                        <h3>Why choose us?</h3>
-                        <p>orem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro</p>
+                        <h3>¿Por que elegirnos?</h3>
+                        <p>Somos una empresa lider en la venta de productos electronicos en la web desde 2003, y sabemos sarasa ssarasa lorem sarsasarasa ssarasa lorem sarsasarasa ssarasa lorem sarsasarasa ssarasa lorem sarsasarasa ssarasa lorem sarsasarasa ssarasa lorem sarsasarasa ssarasa lorem sarsasarasa ssarasa lorem sarsasarasa ssarasa lorem sarsasarasa ssarasa lorem sarsasarasa ssarasa lorem sarsasarasa ssarasa lorem sarsa</p>
                         <br/>
-                        <p>orem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.orem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
-                        <a href="#" className="btn-extra">Learn more</a>
+                        <p>lorem ipsun sarasa sarasa lorem ipsun sarasa sarasa lorem ipsun sarasa sarasa lorem ipsun sarasa sarasa lorem ipsun sarasa sarasa lorem ipsun sarasa sarasa lorem ipsun sarasa sarasa lorem ipsun sarasa sarasa lorem ipsun sarasa sarasa lorem ipsun sarasa sarasa </p>
+                        <a href="#" className="btn-extra">Leer mas</a>
                     </div>
                 </div>
             </section>
@@ -27,27 +27,3 @@ const AboutUs = () => {
 }
 
 export default AboutUs
-
-//     <div className="about-body">
-            
-    //         <div className="title-container">
-    //         {/* <div className="about-img"><img src={aboutBackground} /></div> */}
-    //             <div className="blur">
-    //                 <div></div>
-    //                 <div className="about-title">
-    //                     <div>
-    //                     <h1>About Us</h1>
-    //                     <p>Descpription</p>
-    //                     </div>
-    //                 </div>
-    //                 <div></div>
-    //             </div>
-    //         </div>
-    //         <div className="team-container">
-    //             <div className="about-item"><p>Quienes somos?</p></div>
-    //             <div className="about-item"><p>Trayectoria</p></div>
-    //             <div className="about-item"><p>Partners</p></div>
-                
-    //         </div>     
-    //     </div>
-    // )

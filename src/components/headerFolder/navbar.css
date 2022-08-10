@@ -8,7 +8,6 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: .2s linear;
 }
 
@@ -21,8 +20,11 @@
 }
 
 .nav-header{
+    text-transform: capitalize;
+
     z-index: 1;
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
 }
 

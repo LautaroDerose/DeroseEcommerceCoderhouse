@@ -6,7 +6,7 @@ const Review = () => {
     return (
         <>
         <section className="review" id="review">
-        <h1 className="heading">Customer's <span>review</span></h1>
+        <h1 className="heading">Clientes <span>opinando</span></h1>
         <div className="box-container">
             <div className="box">
                 <div className="stars">
@@ -38,8 +38,8 @@ const Review = () => {
                 <div className="user">
                 <img src="https://i.postimg.cc/H8W9xBRG/joao-paulo-de-souza-oliveira-ZHKKg9ln-CSk-unsplash.jpg" alt="" />
                     <div className="user-info">
-                        <h3>User 1</h3>
-                        <span>happy customer</span>
+                        <h3>User 2</h3>
+                        <span> customer</span>
                     </div>
                 </div>
                 <span className="fas fa-quote-right"><FaQuoteRight/></span>
@@ -56,8 +56,8 @@ const Review = () => {
                 <div className="user">
                 <img src="https://i.postimg.cc/BjjNH764/thai-an-z-Ta-HFYu-QPZM-unsplash.jpg" alt="" />
                     <div className="user-info">
-                        <h3>User 1</h3>
-                        <span>happy customer</span>
+                        <h3>User 3</h3>
+                        <span>Satisfied customer</span>
                     </div>
                 </div>
                 <span className="fas fa-quote-right"><FaQuoteRight/></span>

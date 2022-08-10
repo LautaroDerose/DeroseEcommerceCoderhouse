@@ -10,71 +10,6 @@
     --selectBack: #00d2ef;
     --secondColor: #7253ed;
 }
-/* 
-.about-body{
-    display: grid;
-    grid-template-columns:  1fr 1fr;
-    background-color: var(--backgroundColor);
-    gap: 2rem;
-    color: #FAFAFA;
-    height: 50vh;
-    
-}
-
-.title-container{
-    height: 50vh;
-    background-image: url("../../assets/rod-long-7Csefv0S--Q-unsplash.jpg");
-    background-size: 50%;
-    justify-content: center;
-    align-items: center;
-    display: grid;
-    grid-template-rows: center;
-}
-
-.title-container .blur{
-    width: 100vh;
-    height: 100%;
-    backdrop-filter: blur(1.5px);
-    grid-template-rows: 1fr 1fr 1fr;
-
-}
-
-
-.about-title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    }
-
-.about-title div{
-    padding-top: 50px;
-}
-
-.about-title h1{
-    text-align: center;
-}
-.about-title p{
-    text-align: center;
-}
-
-.team-container{
-    display: grid;
-    grid-template-rows: space-around;
-    justify-content: center;
-    margin: 25px;
-}
-
-.about-item{
-    display: flex;
-    align-items: center;
-    
-    
-}
-
-.about-item p{
-text-align: center;
-} */
 
 .heading{
     text-align: center;
@@ -125,7 +60,6 @@ position: relative;
     object-fit: cover;
 }
 
-
 .about .row .video-container h3{
     position: absolute;
     top: 50%;
@@ -137,13 +71,10 @@ position: relative;
     padding: 1rem 2rem;
     text-align: center;
     mix-blend-mode: screen;
-
 }
-
 
 .about .row .content{
     flex: 1 1 40rem;
-
 }
 
 .about .row .content h3{

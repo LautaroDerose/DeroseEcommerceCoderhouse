@@ -5,16 +5,20 @@ import "./ItemCart.css"
 const ItemCart = ({ product }) => {
     const {removeProduct} = useCartContext();
     return (
-        <div className="itemCart">
+       <div className="itemCart-body">
+            <div className="itemCart">
+            <div className="image-container">
             <img src={product.image} alt={product.brand}/>
+            </div>
             <div className="itemCart-detail">
-                <h1>Nombre: {product.brand} </h1>
-                <h2>Cantidad: {product.quantity}</h2>
+                <h3>Nombre: {product.brand} </h3>
+                <h4>Cantidad: {product.quantity}</h4>
                 <p>Precio u.: {product.price}</p>
                 <p>subtotal: $ {product.quantity * product.price}  </p>
-                <button onClick={()=> removeProduct(product.id)}>Eliminar</button>
+                <button className="" onClick={()=> removeProduct(product.id)}>Eliminar</button>
             </div>
         </div>
+       </div>
     )
 }
 

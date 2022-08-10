@@ -8,7 +8,6 @@ const CartWidget = () => {
 
     return (
         <>
-    
                 <button className="btn-log"><FaCartPlus className="FaCartPlus"/></button>
                 {
                     totalProducts() > 0 ?
@@ -16,8 +15,6 @@ const CartWidget = () => {
                     :
                     <span></span>
                 }
-                
-            
         </>
     )
 }

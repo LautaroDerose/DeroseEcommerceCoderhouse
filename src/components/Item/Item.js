@@ -11,7 +11,7 @@ const Item = ({product}) => {
 
     const [goToCart, setGoToCart] =useState(false);
     const {addProduct} = useCartContext();
-    const {id, brand,model, image, price, stock, category} = product 
+    const {id, brand, model, image, price, stock, category} = product 
 
     const onAdd = (quantity) => {
         setGoToCart(true);
@@ -64,9 +64,9 @@ const Item = ({product}) => {
                 {/* <div className="card-count">
                     <ItemCount initial={1} stock={stock} onAdd={onAdd} />
                 </div> */}
-                <div className="card-footer">
+                {/* <div className="card-footer">
                     <button>Comprar ahora</button>
-                </div>
+                </div> */}
             </div>
         </div>
     )

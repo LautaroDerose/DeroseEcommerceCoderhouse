@@ -8,7 +8,7 @@ const ItemDetail = ({ product }) => {
 
     const [goToCart, setGoToCart] =useState(false);
     const {addProduct} = useCartContext();
-    const {id, brand, image, price, stock, category, description} = product 
+    const {id, brand, image, price, stock, model, category, description} = product 
 
     const onAdd = (quantity) => {
         setGoToCart(true);
@@ -20,21 +20,22 @@ const ItemDetail = ({ product }) => {
                 <div className="detail-img-container">
                 <img className='detail-img' src={image} alt={brand}/>
                 </div>
-                <div>
-                    <div>
+                
+                    <div className="detail-info-container">
                         <div className="detail-info">
                             <div>
                             <h1>{brand}</h1>
-                            <h2>{stock}</h2>
-                            <h3>{category}</h3>
+                            <h2>{model}</h2>
+                            {/* <h3>{category}</h3> */}
                             <p>{description}</p>
+                            <h3>${price}</h3>
                             </div>
-                            <div>
-                                <h3>${price}</h3>
+                            
+                                
+                            
                         </div>
-                    </div>
                     <div>
-                        <h4>Talles</h4>
+                        {/* <h4>Talles</h4>
                         <div className="detail-talles">
                             <span>31</span>
                             <span>32</span>
@@ -42,7 +43,7 @@ const ItemDetail = ({ product }) => {
                             <span>34</span>
                             <span>35</span>
                             <span>36</span>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="count-container">
                         {
@@ -50,7 +51,6 @@ const ItemDetail = ({ product }) => {
                             ? <button className="btn-onAdd"><Link className="finish-buy" to='/cart'>Finalizar compra</Link></button>
                             : <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
                         }
-                    </div>
                     </div>
                 </div>
             </div>

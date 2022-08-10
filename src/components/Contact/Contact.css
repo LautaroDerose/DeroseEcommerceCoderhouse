@@ -11,42 +11,6 @@
     --secondColor: #7253ed;
 }
 
-/* .contact-body{
-    background-color: var(--secondColor);
-    color: #FAFAFA;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.form-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.1rem;
-}
-input,
-textarea{
-    border: thin solid #dedede;
-    border-radius: 0.25rem;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    outline: none;
-    display: block;
-    width: 100%;
-    font-size: 1rem;
-    line-height: 1;
-    border-color: transparent;
-}
-
-textarea{
-    font-family: inherit;
-    resize: none;
-    height: 150px;
-    width: 75vh;
-} */
-
-/* -------- re estilizado ---------- */
 .contact{
     padding: 2rem;
 }
@@ -64,12 +28,13 @@ padding: 2rem 2.5rem;
 box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
 border: .1rem solid rgba(0,0,0,.1);
 background: #fff;
-border-radius: .5rem;}
+border-radius: .5rem;
+}
 
 .contact .row .contact-image-container{
 flex: 1 1 40rem;
-
 }
+
 .contact .row .contact-image-container img{
 width: 100%;
 }
@@ -83,16 +48,13 @@ border: .1rem solid rgba(0,0,0,.1);
 border-radius: .5rem;
 margin: .7rem 0;
 width: 100%;
-
 }
 
 .contact .row form .box:focus{
 border-color: #f06292;
-
 }
 
 .contact .row form textarea{
 height: 15rem;
 resize: none;
-
 }

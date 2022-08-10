@@ -4,9 +4,8 @@ import "./Contact.css"
 
 import app from "../../firebase/firebase"
 import {getFirestore, collection, addDoc } from "firebase/firestore"
-// getDocs, doc, deleteDoc, getDoc, setDoc
-const db = getFirestore(app)
 
+const db = getFirestore(app)
 
 const initialForm = {
     name: "",
@@ -14,8 +13,6 @@ const initialForm = {
     subject:"",
     comments:"",
 }; 
-
-
 
 const validationsForm = (form)=>{
     let errors = {};
@@ -44,10 +41,6 @@ const validationsForm = (form)=>{
     }else if(!regexComments.test(form.comments.trim())){
         errors.comments = "El campo 'Comentarios' solo acepta 500 caracteres"; 
     }
-    
-    
-
-   
 
     return errors;
 };
@@ -57,10 +50,7 @@ let stylesError = {
     color: "#dc3545",
 }
 
-
-
 const Contact = () => {
-
     const {
         form, 
         errors, 
@@ -78,26 +68,23 @@ const Contact = () => {
         comments:"",
     }; 
 
-    const [usuarioGlobal, setUsuarioGlobal] = useState(valorInicial);
-
+    const [usuarioComments, setUsuarioComments] = useState(valorInicial);
     const captureInputs = (e) => {
         handleChange(e);
         const {name, value} = e.target;
-        setUsuarioGlobal({...usuarioGlobal, [name]:value});
+        setUsuarioComments({...usuarioComments, [name]:value});
     }
-
     const saveData = async(e) =>{
         handleSubmit(e);
         e.preventDefault();
-        // console.log(usuarioGlobal)
         try {
             await addDoc(collection(db,'comments'),{ 
-                ...usuarioGlobal
+                ...usuarioComments
             })
         } catch (error) {
             console.log(error)
         }
-        setUsuarioGlobal({...valorInicial});
+        setUsuarioComments({...valorInicial});
     }
 
     return (
@@ -108,24 +95,19 @@ const Contact = () => {
                     <form onSubmit={handleSubmit, saveData} className="form-container">
                         
                         <input 
-                        className="form-name box" type="text" name="name" placeholder="Escribe tu nombre" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.name, usuarioGlobal.name} required />
-
+                        className="form-name box" type="text" name="name" placeholder="Escribe tu nombre" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.name, usuarioComments.name} required />
                         {errors.name && <p style = {stylesError}>{errors.name}</p>}
 
                         <input 
-                        className="form-email box" type="email" name="email" placeholder="Escribe tu email" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.email, usuarioGlobal.email} required/>
-
+                        className="form-email box" type="email" name="email" placeholder="Escribe tu email" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.email, usuarioComments.email} required/>
                         {errors.email && <p style = {stylesError}>{errors.email}</p>}
 
                         <input 
-                        className="form-asunto box" type="text" name="subject" placeholder="Asunto a tratar" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.subject, usuarioGlobal.subject} required/>
-
+                        className="form-asunto box" type="text" name="subject" placeholder="Asunto a tratar" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.subject, usuarioComments.subject} required/>
                         {errors.subject && <p style = {stylesError}>{errors.subject}</p>}
 
-
                         <textarea 
-                        className="form-textarea box" name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.comments, usuarioGlobal.comments} required></textarea>   
-
+                        className="form-textarea box" name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.comments, usuarioComments.comments} required></textarea>   
                         {errors.comments && <p style = {stylesError}>{errors.comments}</p>}
                     
                         <input className= " btn-extra btn-enviarForm" type="submit" value="Enviar"/>
@@ -136,7 +118,6 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            
         </section>
     )
 }
