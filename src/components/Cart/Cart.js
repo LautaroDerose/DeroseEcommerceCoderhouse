@@ -1,19 +1,13 @@
-import React, {useContext, useState} from 'react'
+import React, {useState} from 'react'
 import { useCartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom';
 import ItemCart from '../ItemCart/ItemCart';
 import { addDoc, collection, getFirestore, serverTimestamp } from 'firebase/firestore';
-import { AuthContext } from '../../context/AuthContext';
-import app from '../../firebase/firebase' 
-import {getAuth, signOut} from "firebase/auth"
 import "./cart.css"
 
-const auth = getAuth(app);
 
 const Cart = () => {
     
-    const [goToCheckOut, setGoToCheckOut ] = useState(false)
-    const {mostrar, setMostrar} = useContext(AuthContext)
     const { cart, totalPrice } = useCartContext();
 
     const [datos, setDatos] = useState({
@@ -32,8 +26,6 @@ const Cart = () => {
     })
 
     const handleInputChange = (e) => {
-        
-        // console.log(e.target.value)
         setDatos({
             ...datos,
             [e.target.name]: e.target.value
@@ -52,7 +44,7 @@ const Cart = () => {
         const db = getFirestore();
         const ordersCollection = collection(db, 'orders');
         addDoc(ordersCollection, order)
-        .then(({id}) => alert("Su numero de orden de compra es:  " + (id)))       
+        .then(({id}) => alert("Su numero de orden de compra es:  " + (id) + "Guardalo"))       
     }
 
     if(cart.length === 0){
@@ -76,14 +68,7 @@ const Cart = () => {
            </div>
             
             <p className="totalP">Total: ${totalPrice()} </p>
-            <br></br>
-            {/* <Link  className="finish-buy" to='/' onClick={handleClick} >Confirmar Compra</Link> */}
-            {/* En lugar de enviar al home, poner alert: "su compra ha sido realizada con exito" */}
-            <button className="btn-extra" onClick={ ()=> setGoToCheckOut(true)}>Siguiente</button>
-            {/* <CheckOut/> */}
-
-            { goToCheckOut === true && (
-
+           
                 <form >                                        
                 <div className="form-container">
                     <div className="dobleInput">
@@ -121,16 +106,10 @@ const Cart = () => {
                         </div>
                 </div>
                 </form>
-                       )  }
+                    
                 
                 <button className="btn-extra" to="/" onClick={ handleClick}>Finalizar Compra</button>
 
-                
-
-                
-
-
-            {/* <button className="finish-buy" onClick={usuarioGlobal ? {handleClick} : <LogInContainer/>}>Confirmar compra</button> */}
            </div>
         </>
     )
