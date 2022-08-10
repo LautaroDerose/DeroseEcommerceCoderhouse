@@ -1,9 +1,17 @@
+:root{
+    --clearColor1:#EAE7DC;  
+    --clearColor2:#D8C3A5;  
+    --clearColor3:#8E8D8A;  
+    --clearColor4:#E98074;  
+    --clearColor5:#E85A4F;
+}
 
 .modal{
     position: relative;
     width: 100vh;
-    background: white;
-    border: 2px solid #000;
+    background: var(--clearColor1);
+    border: 2px solid var(--clearColor2);
+    border-radius: 15px;
     box-shadow: 3px ;
     padding: 16px 32px 24px;
     top: 50%;
@@ -18,8 +26,11 @@
 
 .btn-closeForm {
     font-size: 1.5rem;
+    color: var(--clearColor3);
 }
-
+h1{
+    color: var(--clearColor5);
+}
 .modal h2{
     margin-bottom: 1rem;
 }
@@ -30,13 +41,14 @@ div .modal .btn-openModal{
 
 div .modal .modal-container{
     text-align: center;
+    justify-content: center;
 }
 
 .modal form{
     flex: 1 1 40rem;
     padding: 2rem 2.5rem;
     box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
-    border: .1rem solid rgba(0,0,0,.1);
+    border: .1rem solid var(--clearColor2);
     background: #fff;
     border-radius: .5rem;
 } 
@@ -44,14 +56,18 @@ div .modal .modal-container{
 .modal .inputLog{
 padding: 1rem;
 font-size: 1.5rem;
-color: #333;
+color: var(--clearColor3);
 text-transform: none;
-border: .1rem solid rgba(0,0,0,.1);
+border: .1rem solid var(--clearColor2);
 border-radius: .5rem;
 margin: .7rem 0;
 width: 100%;
 }
 
+.sub-button{
+    color: var(--clearColor3);
+}
+
 .modal .inputLog:focus{
-border-color: #f06292;
+border-color: var(--clearColor4);
 }

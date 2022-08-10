@@ -113,7 +113,7 @@ const Contact = () => {
                         
                     </form>
                     <div className="contact-image-container">
-                        <img src="https://i.postimg.cc/hvwS6dr2/undraw-Profile-data-re-v81r.png" alt="profile-data" />
+                        <img src="https://i.postimg.cc/76vzYqcH/undraw-Personal-text-re-vqj3.png" alt="profile-data" />
                     </div>
                 </div>
             </div>

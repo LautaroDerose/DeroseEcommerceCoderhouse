@@ -10,6 +10,14 @@
     padding: 2rem;
 }
 
+.cart-vacio p{
+color: var(--clearColor3);
+}
+
+.cart-vacio Link{
+color: var(--clearColor5);
+}
+
 .totalP{
     margin-top: 2rem;
     font-size: 1.5rem;

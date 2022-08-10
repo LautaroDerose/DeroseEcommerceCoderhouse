@@ -55,7 +55,6 @@
 
 .btn-extra{
     display: inline-block;
-    margin-top: 1rem;
     border-radius: 5rem;
     background: var(--varColo5);
     color: var(--varColo2);
@@ -68,30 +67,7 @@
     color: var(--varColo1);
 }
 
-.home .content{
-min-width: 50rem;
-padding-left: 3rem;
-}
 
-.home .content h3{
-font-size: 3rem;
-color: var(--clearColor5);
-}
-
-.home .content span{
-font-size: 1.5rem;
-color: var(--clearColor4);
-padding: 1rem 0;
-line-height: 0.1;
-}
-
-.home .content p{
-font-size: .8rem;
-color: var(--clearColor3);
-width: 35%;
-padding:  .5rem 0;
-
-}
 /* 
 div .greeting-container{
     display: grid;

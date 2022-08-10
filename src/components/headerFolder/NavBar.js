@@ -11,18 +11,18 @@ const menuItems = [
     {
         id:1,
         label:"Home",
-        toLink:"/home"
+        toLink:"/"
     },
     {
         id:2,
         label:"About us",
         toLink:"/about"
     },
-    // {
-    //     id:3,
-    //     label:"Products",
-    //     toLink:"/products"
-    // },
+    {
+        id:3,
+        label:"Products",
+        toLink:"/itemListContainer"
+    },
     {
         id:4,
         label:"Contact",
@@ -64,7 +64,7 @@ function Navbar() {
             </div>
 
             <div className="nav-general">
-                <NavLink className="logo" to='/'><h3 className="logo">Logo</h3></NavLink>
+                <a className="logo" href='/#home'><h3 className="logo">Logo</h3></a>
                 <nav ref={navRef} >
                     {
                         menuItems.map((item)=> (

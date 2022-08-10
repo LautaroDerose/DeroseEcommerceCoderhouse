@@ -49,7 +49,7 @@ const Cart = () => {
 
     if(cart.length === 0){
         return (
-            <div>
+            <div className="cart-vacio">
                 <p>No hay elementos en el carrito</p>
                 <Link to='/'>Hacer Compras</Link>
             </div>

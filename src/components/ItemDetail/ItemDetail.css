@@ -10,12 +10,20 @@
     --bottonColor1: #1AD1DB;
     --selectBack: #00d2ef;
     --secondColor: #7253ed;
+
+    
+        --clearColor1:#EAE7DC;  
+        --clearColor2:#D8C3A5;  
+        --clearColor3:#8E8D8A;  
+        --clearColor4:#E98074;  
+        --clearColor5:#E85A4F;
+    
 }
 
 .detail-container{
     top: 100px;
     position: absolute;
-    background-color: var(--backgroundColor);
+    background-color: var(--clearColor1);
     margin: 25px;
     padding: 25px;
     display: grid;
@@ -27,16 +35,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .detail-img-container img{
     justify-content: center;
 width: 100%;
-}
-
-.detail-box{
-
 }
 
 .detail-info-container{
@@ -52,18 +55,18 @@ width: 100%;
 }
 
 .detail-info h1{
-    color: #fafafa;
+    color: var(--clearColor5);
 }
 
 .detail-info h2{
-    color: #afafaf;    
+    color: var(--clearColor4);    
     font-size: 1rem;
 }
 
 .detail-info h3{
     margin-top: 1rem;
     padding-top: 1rem;
-    color: #eaeaea;
+    color: var(--clearColor5);
     justify-content: center;
     padding: .5rem 0;
     font-size: 2rem;
@@ -71,40 +74,18 @@ width: 100%;
 
 .detail-info p{
     padding: .5rem 0;
-    color: #bdb2b2;
+    color: var(--clearColor3);
     font-size:small;
 
 }
 
-h4{
-    color: var(--borderColor2);
-}
-
-.detail-talles{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 22px 0;
-}
-
-.detail-talles span{
-    cursor: pointer;
-    color: blueviolet;
-    background: #f1f2f3;
-    border-radius: 3px;
-    padding: 6px 12px;
-}
-
 .btn-onAdd{
-    /* width: 100%;
-    font-size: 50%;
-    justify-content: space-between;
-    align-items: center; */
     text-decoration: none;
     cursor: pointer;
     width: 100%;
     height: 46px;
     border-radius: 12px;
-    background: linear-gradient(#6787fd, #3f66f5);
+    background: var(--clearColor5);
     color: #ffffff;
     font-size: 20px;
     letter-spacing: .5px;

@@ -14,18 +14,19 @@
 
 .home{
     display: flex;
+    
     align-items: center;
     min-height: 100vh;
-    background: var(--clearColor1);
-    /* background: url(../../assets/arno-smit-qY_yTu7YBT4-unsplash.jpg) no-repeat; */
-    /* background-size: cover;
-    background-position: center; */
-    padding: 2rem;
+    /* background: var(--clearColor1); */
+    background: url(https://i.postimg.cc/wjsPSvc0/undraw-Add-to-cart-re-wrdo.png) no-repeat;
+    background-size:contain ;
+    background-position:70vh -3vw;
+    padding: 4rem;
 }
 
 .btn-extra{
     display: inline-block;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     border-radius: 5rem;
     background: var(--clearColor4);
     color: var(--clearColor1);
@@ -37,6 +38,32 @@
     background: var(--clearColor5);
     color: var(--clearColor1);
 }
+
+.content{
+    min-width: 50rem;
+    padding-left: 5rem;
+    padding-top: 5rem;
+    }
+    
+    .home .content h3{
+    font-size: 3rem;
+    color: var(--clearColor5);
+    }
+    
+    .home .content span{
+    font-size: 1.5rem;
+    color: var(--clearColor4);
+    padding: 1rem 0;
+    line-height: 0.1;
+    }
+    
+    .home .content p{
+    font-size: .8rem;
+    color: var(--clearColor3);
+    width: 35%;
+    padding:  .5rem 0;
+    
+    }
 
 div .inicio{
     display: flex;

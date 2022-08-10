@@ -37,17 +37,17 @@ const PruebaModal = () => {
 
     return (
         <div className="modalContainer">
-            <Button className="btn-openModal" onClick={()=>abrirCerarModal()}>LogIn / SingIn</Button>
+            <button className="btn-extra" onClick={()=>abrirCerarModal()}>LogIn / SingIn</button>
             <Modal open={modal} onClose={abrirCerarModal}>
                 {/* {body}             */}
             <div className="modal">
                 
                 <div className="form-heading">
-                    <h1><FaUserAlt/>  Formulario</h1>
+                    <h1><FaUserAlt/>{enRegistro ? "  Registrate" : "  Inicia Sesion"}</h1>
                     <buttton className="btn-closeForm" onClick={()=>abrirCerarModal()} ><FaRegTimesCircle/></buttton>
                 </div>
                 <br/>
-                <h2>{enRegistro ? "Registrate" : "Inicia Sesion"}</h2>
+                
                 <form onSubmit={submitHandler}>
 
                         {/* <label htmlFor="nombre">Ingrese su nombre</label> */}
@@ -63,7 +63,7 @@ const PruebaModal = () => {
                             {enRegistro ? "Registrate" : "Inicia Sesion"}
                         </button>
                         <br/>
-                        <button type="submit" onClick={()=> setEnRegistro(!enRegistro)}>
+                        <button className="sub-button"type="submit" onClick={()=> setEnRegistro(!enRegistro)}>
                             {enRegistro ? "¿Ya tienes cuenta? Inicia Sesion" : "¿No tienes cuenta? Registrate"}
                         </button>
                 </form>
