@@ -16,7 +16,50 @@
     --mainColorLight:#ff94c2;
     --secondColor:#9575cd;
     --textColor: #000000;
-    --textColorSecond:#e3f2fd;        
+    --textColorSecond:#e3f2fd;
+    
+    /* opcion2 */
+    --varColo1:#0B0C10;        
+    --varColo2:#1F2833;        
+    --varColo3:#C5C6C7;        
+    --varColo4:#66FCF1;        
+    --varColo5:#45A29E;        
+
+    --palette1: #2C3531;
+    --palette2: #116466;
+    --palette3: #D9B08C;
+    --palette4: #FFCB9A;
+    --palette5: #D1E8E2;
+
+    --dynamic1: #2F4454;
+    --dynamic2: #2E151B;
+    --dynamic3: #DA7B93;
+    --dynamic4: #376E6F;
+    --dynamic5: #1C3334;
+
+    --coffe1: #88BDBC;
+    --coffe2: #254E58;
+    --coffe3: #112D32;
+    --coffe4: #4F4A41;
+    --coffe5: #6E6658;
+
+    --monocromoazul1: #17252A;
+    --monocromoazul2: #2B7A79;
+    --monocromoazul3: #3AAFA9;
+    --monocromoazul4: #DEF2F1;
+    --monocromoazul5: #FEFFFF;
+
+    --vioYama1: #FAED26;
+    --vioYama2: #46344E;
+    --vioYama3: #5A5560;
+    --vioYama4: #9D8D8F;
+    --vioYama5: #9B786F;
+
+    --clearColor1:#EAE7DC;  
+    --clearColor2:#D8C3A5;  
+    --clearColor3:#8E8D8A;  
+    --clearColor4:#E98074;  
+    --clearColor5:#E85A4F; 
 }
 
 .nav-header{
@@ -36,13 +79,13 @@ div.nav-general{
     justify-content: space-between;
     height: 80px;
     padding: 0 1.5rem;
-    background-color: var(--mainColor);
-    color: var(--textColor);
+    background-color: var(--clearColor2);
+    color: var(--clearColor3);
 }
 
 div .promo{
-    background-color: greenyellow;
-    color: var(--textColorSecond);
+    background-color: var(--clearColor4);
+    color: var(--clearColor1);
     padding: 5px;
     display: inline-block;
     width: 100%;
@@ -50,17 +93,21 @@ div .promo{
 }
     
 header div .btn-log:hover{
-     color: var(--secondColor);
+     color: var(--clearColor4);
+}
+
+.logo{
+    color: var(--clearColor5);
 }
 
 nav a{
     margin: 0 1.5rem;
-    color: var(--textColorSecond);
+    color: var(--clearColor3);
     text-decoration: none;
 }
 
 nav a:hover{
-    color: var(--secondColor);
+    color: var(--clearColor4);
 }
 
 header .nav-btn{
@@ -69,7 +116,7 @@ header .nav-btn{
     background: transparent;
     border: none;
     outline: none;
-    color: var(--textColor);
+    color: var(--clearColor4);
     visibility: hidden;
     opacity: 0;
     font-size: 1.3rem;
@@ -82,7 +129,7 @@ header div .btn-log{
     background: transparent;
     border: none;
     outline: none;
-    color: var(--textColorSecond);
+    color: var(--clearColor4);
     font-size: 1rem;
 }
 

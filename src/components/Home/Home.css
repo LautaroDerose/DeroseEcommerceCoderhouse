@@ -1,12 +1,25 @@
+:root{
+    --varColo1:#0B0C10;        
+    --varColo2:#1F2833;        
+    --varColo3:#C5C6C7;        
+    --varColo4:#66FCF1;        
+    --varColo5:#45A29E;  
 
+    --clearColor1:#EAE7DC;  
+    --clearColor2:#D8C3A5;  
+    --clearColor3:#8E8D8A;  
+    --clearColor4:#E98074;  
+    --clearColor5:#E85A4F;  
+}
 
 .home{
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url(../../assets/arno-smit-qY_yTu7YBT4-unsplash.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: var(--clearColor1);
+    /* background: url(../../assets/arno-smit-qY_yTu7YBT4-unsplash.jpg) no-repeat; */
+    /* background-size: cover;
+    background-position: center; */
     padding: 2rem;
 }
 
@@ -14,14 +27,15 @@
     display: inline-block;
     margin-top: 1rem;
     border-radius: 5rem;
-    background: #333;
-    color: #fff;
+    background: var(--clearColor4);
+    color: var(--clearColor1);
     padding: 0.9rem 2.5rem;
     font-size: 1rem;
 }
 
 .btn-extra:hover{
-    background: violet;
+    background: var(--clearColor5);
+    color: var(--clearColor1);
 }
 
 div .inicio{
@@ -36,8 +50,8 @@ div .inicio h4{
 .btn-cerrarSesion{
      display: inline-block;
     border-radius: 5rem;
-    background: #333;
-    color: #fff;
+    background: var(--clearColor4);
+    color: var(--clearColor1);
     padding: 0.5rem 1rem;
     font-size: .7rem;
 }

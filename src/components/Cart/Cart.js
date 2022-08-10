@@ -71,6 +71,9 @@ const Cart = () => {
            
                 <form >                                        
                 <div className="form-container">
+                        
+                    <h2>Informacion de contacto</h2>
+                    <span>Usaremos tus datos para informarte sobre la entrega</span>
                     <div className="dobleInput">
                     <input className="inputLog" type="text" placeholder="Nombre(s)*" maxLength="15" name="name" id="name"  onChange={handleInputChange} required/>
                     <input className="inputLog" type="text" placeholder="Apellido(s)*" maxLength="15" name="surname" id="surname" onChange={handleInputChange} required />
@@ -93,13 +96,11 @@ const Cart = () => {
                     <input className="inputLog" type="text" placeholder="Localidad *" maxLength="25" name="location" id="location"  onChange={handleInputChange}/>
                     </div>
                     <div>
-                            <h2>Informacion de contacto</h2>
-                            <span>Usaremos tus datos para informarte sobre la entrega</span>
 
                             <input className="inputLog" type="email" name="email" id="email" placeholder="correo electronico *" onChange={handleInputChange} required />
 
                             <input className="inputLog" type="text" name="phone" id="phone" placeholder="Telefono (8 a 15 digitos)*" onChange={handleInputChange} required />
-                            <span>Solo te llamaremos si tenemos alguna duda sobre el epdido</span>
+                            <p className="epigrafe">Solo te llamaremos si tenemos alguna duda sobre el pedido</p>
 
                             <input className="inputLog" type="text" name="dni" id="dni" placeholder="DNI (ej. 12345678) *" onChange={handleInputChange}  required />
                             

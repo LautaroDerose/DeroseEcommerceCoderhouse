@@ -64,7 +64,7 @@ function Navbar() {
             </div>
 
             <div className="nav-general">
-                <NavLink to='/'><h3>Logo</h3></NavLink>
+                <NavLink className="logo" to='/'><h3 className="logo">Logo</h3></NavLink>
                 <nav ref={navRef} >
                     {
                         menuItems.map((item)=> (

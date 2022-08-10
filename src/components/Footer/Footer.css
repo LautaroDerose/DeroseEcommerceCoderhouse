@@ -1,6 +1,14 @@
+:root{
+    --clearColor1:#EAE7DC;  
+    --clearColor2:#D8C3A5;  
+    --clearColor3:#8E8D8A;  
+    --clearColor4:#E98074;  
+    --clearColor5:#E85A4F; 
+}
+
 .footer{
     padding: 2rem;
-    background-color: rgb(152, 231, 226);
+    background-color:var(--clearColor2);
 }
 
 .footer .box-container{
@@ -14,20 +22,20 @@ gap: 1rem;
 }
 
 .footer .box-container .box h3{
-color: #333;
+color: var(--clearColor5);
 font-size: 1.1rem;
 padding: 1rem 0 ;
 }
 
 .footer .box-container .box a{
 display: block;
-color: #666;
+color: var(--clearColor3);
 font-size: .9rem;
 padding: .5rem 0 ;
 }
 
 .footer .box-container .box a:hover{
-color: salmon;
+color: var(--clearColor4);
 text-decoration: underline;
 }
 
@@ -40,10 +48,10 @@ text-decoration: underline;
     padding: .5rem;
     margin-top: .7rem;    
     padding-top: 2.5rem;
-    color: #333;
+    color: var(--clearColor3);
     border-top: .1rem solid rgba(0,0,0,.1);
 }
 
 .footer .credit span {
-color: salmon;
+color: var(--clearColor5);
 }

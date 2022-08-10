@@ -9,6 +9,13 @@
     --bottonColor1: #1AD1DB;
     --selectBack: #00d2ef;
     --secondColor: #7253ed;
+
+    
+    --clearColor1:#EAE7DC;  
+    --clearColor2:#D8C3A5;  
+    --clearColor3:#8E8D8A;  
+    --clearColor4:#E98074;  
+    --clearColor5:#E85A4F; 
 }
 
 .contact{
@@ -26,7 +33,7 @@
 flex: 1 1 40rem;
 padding: 2rem 2.5rem;
 box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
-border: .1rem solid rgba(0,0,0,.1);
+border: .1rem solid var(--clearColor2);
 background: #fff;
 border-radius: .5rem;
 }
@@ -42,19 +49,23 @@ width: 100%;
 .contact .row form .box{
 padding: 1rem;
 font-size: 1.5rem;
-color: #333;
+color: var(--clearColor3);
 text-transform: none;
-border: .1rem solid rgba(0,0,0,.1);
+border: .1rem solid var(--clearColor2);
 border-radius: .5rem;
 margin: .7rem 0;
 width: 100%;
 }
 
 .contact .row form .box:focus{
-border-color: #f06292;
+border-color: var(--clearColor4);
 }
 
 .contact .row form textarea{
 height: 15rem;
 resize: none;
+}
+
+::placeholder{
+    color: var(--clearColor3);
 }

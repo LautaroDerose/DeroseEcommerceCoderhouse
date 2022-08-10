@@ -47,18 +47,17 @@ const validationsForm = (form)=>{
 
 let stylesError = {
     fontWeight: "bold",
-    color: "#dc3545",
+    color: "#E85A4F",
 }
 
 const Contact = () => {
     const {
-        form, 
         errors, 
         // loading, 
         // response, 
         handleBlur, 
-        handleChange, 
-        handleSubmit
+        // handleChange, 
+        // handleSubmit
     } = useForm(initialForm, validationsForm);
 
     const valorInicial = {
@@ -69,13 +68,13 @@ const Contact = () => {
     }; 
 
     const [usuarioComments, setUsuarioComments] = useState(valorInicial);
-    const captureInputs = (e) => {
-        handleChange(e);
+    const handleChange = (e) => {
+        // handleChange(e);
         const {name, value} = e.target;
         setUsuarioComments({...usuarioComments, [name]:value});
     }
-    const saveData = async(e) =>{
-        handleSubmit(e);
+    const handleSubmit = async(e) =>{
+        // handleSubmit(e);
         e.preventDefault();
         try {
             await addDoc(collection(db,'comments'),{ 
@@ -92,29 +91,29 @@ const Contact = () => {
             <div >
                 <h1 className="heading"><span>Contact </span>us</h1>
                 <div className="row">
-                    <form onSubmit={handleSubmit, saveData} className="form-container">
+                    <form onSubmit={ handleSubmit} className="form-container">
                         
                         <input 
-                        className="form-name box" type="text" name="name" placeholder="Escribe tu nombre" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.name, usuarioComments.name} required />
+                        className="form-name box" type="text" name="name" placeholder="Escribe tu nombre" onBlur={handleBlur} onChange={handleChange} value={ usuarioComments.name} required />
                         {errors.name && <p style = {stylesError}>{errors.name}</p>}
 
                         <input 
-                        className="form-email box" type="email" name="email" placeholder="Escribe tu email" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.email, usuarioComments.email} required/>
+                        className="form-email box" type="email" name="email" placeholder="Escribe tu email" onBlur={handleBlur} onChange={handleChange} value={ usuarioComments.email} required/>
                         {errors.email && <p style = {stylesError}>{errors.email}</p>}
 
                         <input 
-                        className="form-asunto box" type="text" name="subject" placeholder="Asunto a tratar" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.subject, usuarioComments.subject} required/>
+                        className="form-asunto box" type="text" name="subject" placeholder="Asunto a tratar" onBlur={handleBlur} onChange={handleChange} value={ usuarioComments.subject} required/>
                         {errors.subject && <p style = {stylesError}>{errors.subject}</p>}
 
                         <textarea 
-                        className="form-textarea box" name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" onBlur={handleBlur} onChange={handleChange, captureInputs} value={form.comments, usuarioComments.comments} required></textarea>   
+                        className="form-textarea box" name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" onBlur={handleBlur} onChange={handleChange} value={ usuarioComments.comments} required></textarea>   
                         {errors.comments && <p style = {stylesError}>{errors.comments}</p>}
                     
                         <input className= " btn-extra btn-enviarForm" type="submit" value="Enviar"/>
                         
                     </form>
                     <div className="contact-image-container">
-                        <img src="https://i.postimg.cc/hvwS6dr2/undraw-Profile-data-re-v81r.png" alt="profile-data-image" />
+                        <img src="https://i.postimg.cc/hvwS6dr2/undraw-Profile-data-re-v81r.png" alt="profile-data" />
                     </div>
                 </div>
             </div>

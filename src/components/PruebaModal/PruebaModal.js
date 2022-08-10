@@ -54,10 +54,10 @@ const PruebaModal = () => {
                         <input className="inputLog" type="text" placeholder="Escribe tu nombre" maxLength="15" name="nombre" id="nombre" />
 
                         {/* <label htmlFor="email">Ingrese su email</label> */}
-                        <input className="inputLog" type="email" name="" id="formEmail" placeholder="ejemplo@unMail.com" />
+                        <input className="inputLog" type="email"  id="formEmail" name="formEmail" placeholder="ejemplo@unMail.com" />
 
                         {/* <label htmlFor="password">Ingrese su contrasena</label> */}
-                        <input className="inputLog" type="password" placeholder="Escribe tu contrasena" id="formPassword"/>
+                        <input className="inputLog" type="password" placeholder="Escribe tu contrasena" id="formPassword" name="formPassword"/>
                         
                         <button type="submit" className="btn-extra">
                             {enRegistro ? "Registrate" : "Inicia Sesion"}

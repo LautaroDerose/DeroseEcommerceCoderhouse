@@ -11,7 +11,7 @@ const ItemCart = ({ product }) => {
             <img src={product.image} alt={product.brand}/>
             </div>
             <div className="itemCart-detail">
-                <h3>Nombre: {product.brand} </h3>
+                <h3>Nombre: {product.model} </h3>
                 <h4>Cantidad: {product.quantity}</h4>
                 <p>Precio u.: {product.price}</p>
                 <p>subtotal: $ {product.quantity * product.price}  </p>

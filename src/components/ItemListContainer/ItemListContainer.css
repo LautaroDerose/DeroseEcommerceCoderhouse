@@ -12,6 +12,30 @@
     --secondColor:#9575cd;
     --textColor: #000000;
     --textColorSecond:#e3f2fd;
+
+    --vioYama1: #FAED26;
+    --vioYama2: #46344E;
+    --vioYama3: #5A5560;
+    --vioYama4: #9D8D8F;
+    --vioYama5: #9B786F;
+
+    --coffe1: #88BDBC;
+    --coffe2: #254E58;
+    --coffe3: #112D32;
+    --coffe4: #4F4A41;
+    --coffe5: #6E6658;
+
+    --varColo1:#0B0C10;        
+    --varColo2:#1F2833;        
+    --varColo3:#C5C6C7;        
+    --varColo4:#66FCF1;        
+    --varColo5:#45A29E;    
+
+    --clearColor1:#EAE7DC;  
+    --clearColor2:#D8C3A5;  
+    --clearColor3:#8E8D8A;  
+    --clearColor4:#E98074;  
+    --clearColor5:#E85A4F;  
 }
 
 
@@ -20,9 +44,11 @@
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url(../../assets/arno-smit-qY_yTu7YBT4-unsplash.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
+    /* background: url(../../assets/arno-smit-qY_yTu7YBT4-unsplash.jpg) no-repeat; */
+    background: var(--varColo1);
+    background-color:var(--varColo1) ;
+    /* background-size: cover;
+    background-position: center; */
 }
 
 
@@ -31,14 +57,15 @@
     display: inline-block;
     margin-top: 1rem;
     border-radius: 5rem;
-    background: #333;
-    color: #fff;
+    background: var(--varColo5);
+    color: var(--varColo2);
     padding: 0.9rem 2.5rem;
     font-size: 1rem;
 }
 
 .btn-extra:hover{
-    background: violet;
+    background: var(--varColo4);
+    color: var(--varColo1);
 }
 
 .home .content{
@@ -48,19 +75,19 @@ padding-left: 3rem;
 
 .home .content h3{
 font-size: 3rem;
-color: #333;
+color: var(--clearColor5);
 }
 
 .home .content span{
 font-size: 1.5rem;
-color: rgb(230, 111, 184);
+color: var(--clearColor4);
 padding: 1rem 0;
 line-height: 0.1;
 }
 
 .home .content p{
 font-size: .8rem;
-color: #999;
+color: var(--clearColor3);
 width: 35%;
 padding:  .5rem 0;
 

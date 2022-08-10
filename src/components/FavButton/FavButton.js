@@ -1,8 +1,6 @@
-import React, {useState} from 'react'
-import { AuthContext } from '../../context/AuthContext';
+import React from 'react'
 
 import { FaRegHeart } from 'react-icons/fa';
-
 
 const FavButton = ({id}) => {
 
