@@ -41,7 +41,7 @@ div.nav-general{
 }
 
 div .promo{
-    background-color: var(--secondColor);
+    background-color: greenyellow;
     color: var(--textColorSecond);
     padding: 5px;
     display: inline-block;

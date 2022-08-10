@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import "./ItemListContainer.css"
-import product from"../../assets/product.png"
 import { ItemList } from '../ItemList/ItemList'
 import { useParams } from 'react-router'
 import { db } from "../../firebase/firebase";
 import { collection, getDocs, query, where } from '@firebase/firestore';
-import LogInContainer from '../LogInContainer/LogInContainer'
-import PruebaModal from '../PruebaModal/PruebaModal'
 import AboutUs from '../AboutUs/AboutUs'
 import Review from '../Review/Review'
 import Contact from '../Contact/Contact'
