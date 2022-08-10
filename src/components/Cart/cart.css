@@ -65,7 +65,7 @@ color: var(--clearColor5);
 .inputLog{
 padding: 1rem;
 font-size: 1rem;
-color: var(--clearColor3);
+color: #333;
 text-transform: none;
 border: .1rem solid rgba(0,0,0,.1);
 border-radius: .5rem;
