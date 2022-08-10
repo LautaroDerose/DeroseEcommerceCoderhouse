@@ -49,7 +49,7 @@ width: 100%;
 .contact .row form .box{
 padding: 1rem;
 font-size: 1.5rem;
-color: var(--clearColor3);
+color: #333;
 text-transform: none;
 border: .1rem solid var(--clearColor2);
 border-radius: .5rem;
