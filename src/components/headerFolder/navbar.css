@@ -152,13 +152,23 @@ header div .btn-log{
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        background-color: var(--mainColor);
+        background-color: var(--clearColor2);
         transition: 1s;
         transform: translateY(-100vh);
     }
 
     header .responsive_nav{
         transform: none;
+    }
+
+    
+    header .responsive_nav a{
+        color: var(--clearColor3) ;
+    }
+
+    header .responsive_nav a:hover{
+        color: var(--clearColor5);
+
     }
 
     nav .nav-close-btn{
@@ -169,8 +179,8 @@ header div .btn-log{
 
     nav a{
         font-size: 1.5rem;
+        color: var(--clearColor3) ;
     }
-
 }
 
 /* ----------------------------------------------- */

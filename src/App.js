@@ -37,7 +37,7 @@ function App() {
 
   return (
     <>
-      {/* {usuarioGlobal ? <Home  /> : <PruebaModal/>} */}
+      
       <BrowserRouter>
         <AuthContext.Provider value={{mostrar, setMostrar}}>
           <CartProvider>
@@ -50,7 +50,6 @@ function App() {
               <Route path='/cart' element={<Cart/>} />
               <Route path='/itemListContainer' element={<ItemListContainer/>} />
               <Route path="/detail/:productId" element={<ItemDetailContainer/>} />
-              {/* <Route path='/register' element={<Register/>}/> */}
               {/* <Route path='/home' element={<Home/>} /> */}
             </Routes>
           </CartProvider>
